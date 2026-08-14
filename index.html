@@ -4,255 +4,308 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Rhythm — Builder, Founder, STEM</title>
-<meta name="description" content="Portfolio of Rhythm — founder of Minorities in STEM, builder of AI, web, and crypto projects, and a young STEM leader." />
+<meta name="description" content="Portfolio of Rhythm — founder of Minorities in STEM, builder of AI, web, and blockchain projects widening access to technology." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,900&family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --ink:#0a0b0d;
-    --panel:#101216;
-    --line:#23262d;
-    --bone:#f4f1ea;
-    --muted:#9aa0ab;
-    --accent:#2f6bff;
-    --accent-2:#ff5c35;
-    --maxw:1160px;
+    --paper:#eaf0f7;
+    --card:#ffffff;
+    --ink:#14171f;
+    --muted:#5b6270;
+    --line:#dbe3ef;
+    --band:#d6e4f6;
+    --dot:#bfcde1;
+    --blue:#2f6bff;
+    --teal:#0aa6a0;
+    --green:#2fa24d;
+    --orange:#ff6a2b;
+    --violet:#6c5ce7;
+    --maxw:1120px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    background:var(--ink);
-    color:var(--bone);
+    background:var(--paper);
+    background-image:radial-gradient(var(--dot) 1.4px,transparent 1.4px);
+    background-size:24px 24px;
+    color:var(--ink);
     font-family:"Inter",system-ui,sans-serif;
-    line-height:1.6;
+    line-height:1.65;
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
   a{color:inherit;text-decoration:none}
-  ::selection{background:var(--accent);color:#fff}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-  .mono{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  ::selection{background:var(--blue);color:#fff}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  .hand{font-family:"Caveat",cursive}
   .serif{font-family:"Fraunces",Georgia,serif}
 
-  nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(10px);
-      background:rgba(10,11,13,.72);border-bottom:1px solid transparent;transition:border-color .3s}
-  nav.scrolled{border-color:var(--line)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
-  .brand{font-family:"Fraunces",serif;font-weight:900;font-size:20px;letter-spacing:-.01em}
-  .brand span{color:var(--accent)}
-  .nav-links{display:flex;gap:30px}
-  .nav-links a{font-size:13px;color:var(--muted);transition:color .2s}
-  .nav-links a:hover{color:var(--bone)}
-  @media(max-width:720px){.nav-links{display:none}}
+  .u{position:relative;font-weight:600;white-space:nowrap;padding-bottom:1px}
+  .u::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;border-radius:3px;opacity:.85}
+  .u.b::after{background:var(--blue)} .u.g::after{background:var(--green)}
+  .u.o::after{background:var(--orange)} .u.t::after{background:var(--teal)}
+  .u.v::after{background:var(--violet)}
+  .u.b{color:var(--blue)} .u.g{color:var(--green)} .u.o{color:var(--orange)} .u.t{color:var(--teal)} .u.v{color:var(--violet)}
 
-  header.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 0 80px}
-  .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.25;mask-image:radial-gradient(circle at 70% 30%,#000,transparent 70%)}
-  .blob{position:absolute;border-radius:50%;filter:blur(10px);opacity:.9;z-index:0}
-  .blob.a{width:420px;height:420px;right:-80px;top:8%;background:radial-gradient(circle at 30% 30%,var(--accent),transparent 62%);opacity:.35}
-  .blob.b{width:300px;height:300px;right:180px;bottom:6%;background:radial-gradient(circle at 40% 40%,var(--accent-2),transparent 60%);opacity:.22}
-  .hero-inner{position:relative;z-index:2}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:100px;padding:7px 15px;margin-bottom:28px}
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 12px var(--accent-2)}
-  h1.hero-title{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(52px,10vw,120px);line-height:.92;letter-spacing:-.03em}
-  h1.hero-title em{font-style:italic;color:var(--accent)}
-  .hero-sub{max-width:560px;margin-top:26px;font-size:clamp(17px,2vw,20px);color:#cfd3da}
-  .hero-cta{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
-  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:100px;font-size:14px;font-weight:600;transition:transform .15s ease,background .2s,border-color .2s}
-  .btn:hover{transform:translateY(-2px)}
-  .btn.solid{background:var(--accent);color:#fff}
-  .btn.ghost{border:1px solid var(--line);color:var(--bone)}
-  .btn.ghost:hover{border-color:var(--accent)}
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(214,228,246,.86);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.6)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:"Fraunces",serif;font-weight:900;font-size:20px}
+  .brand .plane{font-size:20px;transform:rotate(-8deg)}
+  .brand span{color:var(--blue)}
+  .navbtns{display:flex;gap:9px}
+  .navbtns a{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:18px;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 1px 0 rgba(20,23,31,.04)}
+  .navbtns a:hover{transform:translateY(-3px) rotate(-4deg);box-shadow:0 6px 14px rgba(47,107,255,.16)}
+  @media(max-width:560px){.navbtns a{width:36px;height:36px;font-size:16px}.brand{font-size:17px}}
 
-  section{padding:100px 0;position:relative}
-  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:52px;border-bottom:1px solid var(--line);padding-bottom:22px}
-  .sec-head h2{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(32px,5vw,54px);line-height:1;letter-spacing:-.02em}
-  .sec-head p{max-width:340px;color:var(--muted);font-size:14px}
+  .sticker{position:absolute;font-size:30px;opacity:.55;filter:saturate(1.1);z-index:0;user-select:none;pointer-events:none}
 
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-  .stat{background:var(--ink);padding:30px 24px}
-  .stat .num{font-family:"Fraunces",serif;font-weight:900;font-size:44px;line-height:1;color:var(--bone)}
-  .stat .num b{color:var(--accent);font-weight:900}
-  .stat .lbl{margin-top:10px;color:var(--muted);font-size:13px}
-  @media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+  header.hero{padding:120px 0 60px;position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .kick{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:100px;padding:6px 14px;font-family:"Caveat",cursive;font-size:19px;color:var(--muted);transform:rotate(-1.5deg);margin-bottom:20px}
+  .kick .d{width:8px;height:8px;border-radius:50%;background:var(--orange)}
+  h1.name{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(58px,9vw,104px);line-height:.9;letter-spacing:-.03em}
+  h1.name .dot{color:var(--blue)}
+  .lede{margin-top:24px;font-size:clamp(17px,1.8vw,20px);color:#2a2f3a;max-width:560px}
+  .email{margin-top:22px;font-family:"Caveat",cursive;font-size:26px;color:var(--ink);display:inline-flex;align-items:center;gap:8px;border-bottom:2px dashed var(--blue);padding-bottom:2px}
+  .email .at,.email .dt{color:var(--orange)}
+  .socials{display:flex;gap:11px;margin-top:26px;flex-wrap:wrap}
+  .socials a{width:46px;height:46px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:14px;font-size:19px;color:var(--ink);transition:transform .15s ease,border-color .15s,box-shadow .15s}
+  .socials a:hover{transform:translateY(-3px);border-color:var(--blue);box-shadow:0 8px 16px rgba(47,107,255,.16)}
 
-  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
-  .card{grid-column:span 4;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;min-height:230px;position:relative;transition:transform .2s ease,border-color .2s}
-  .card:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .frame{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 18px 40px rgba(30,50,90,.12);transform:rotate(2deg)}
+  .frame .tape{position:absolute;width:96px;height:26px;background:rgba(47,107,255,.16);border:1px dashed rgba(47,107,255,.5);top:-13px;left:50%;transform:translateX(-50%) rotate(-3deg);border-radius:3px}
+  .frame-inner{border-radius:14px;background:linear-gradient(160deg,#eaf1ff,#f3f7ff);border:1px solid var(--line);padding:30px 22px;text-align:center;position:relative;overflow:hidden}
+  .frame-inner .bigplane{font-size:74px;display:block;margin:4px 0 10px;transform:rotate(-10deg)}
+  .frame-inner h3{font-family:"Fraunces",serif;font-weight:900;font-size:26px;line-height:1.05}
+  .frame-inner p{font-family:"Caveat",cursive;font-size:22px;color:var(--muted);margin-top:6px}
+  .frame-inner .mini{display:flex;justify-content:center;gap:8px;margin-top:16px;flex-wrap:wrap}
+  .chip{font-size:12px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:100px;padding:5px 11px;color:var(--muted)}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:34px}.frame{max-width:420px;margin:0 auto}}
+
+  .seen{margin-top:54px;border-top:1px dashed var(--line);padding-top:22px}
+  .seen .lbl{font-family:"Caveat",cursive;font-size:22px;color:var(--muted);display:flex;align-items:center;gap:8px;margin-bottom:14px}
+  .seen-row{display:flex;flex-wrap:wrap;gap:12px}
+  .seen-row .badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 15px;font-weight:600;font-size:14px;color:var(--ink)}
+  .seen-row .badge .ic{font-size:16px}
+
+  section{padding:70px 0;position:relative}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:34px}
+  .sec-head .em{font-size:30px}
+  .sec-head h2{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(30px,4.5vw,46px);letter-spacing:-.02em;line-height:1}
+  .sec-head .sub{font-family:"Caveat",cursive;font-size:22px;color:var(--muted);margin-left:auto;max-width:300px;text-align:right}
+  @media(max-width:640px){.sec-head .sub{display:none}}
+
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+  .card{grid-column:span 4;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;min-height:210px;position:relative;transition:transform .18s ease,box-shadow .18s ease}
+  .card:hover{transform:translateY(-5px) rotate(-.5deg);box-shadow:0 16px 30px rgba(30,50,90,.12)}
   .card.wide{grid-column:span 6}
-  .card.feature{grid-column:span 12;min-height:260px;background:linear-gradient(120deg,#0d1017,#12151d);display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:center}
-  .card .tag{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-  .card h3{font-family:"Fraunces",serif;font-weight:600;font-size:26px;margin:14px 0 10px;letter-spacing:-.01em}
-  .card.feature h3{font-size:clamp(30px,4vw,46px);font-weight:900}
+  .card.feature{grid-column:span 12;min-height:auto;display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:center;background:linear-gradient(150deg,#ffffff,#eef4ff)}
+  .card .tag{font-family:"Caveat",cursive;font-size:19px;font-weight:700}
+  .card h3{font-family:"Fraunces",serif;font-weight:600;font-size:24px;margin:8px 0 8px;letter-spacing:-.01em}
+  .card.feature h3{font-size:clamp(28px,3.5vw,40px);font-weight:900}
   .card p{color:var(--muted);font-size:14.5px;flex:1}
-  .card .go{margin-top:18px;font-size:13px;font-weight:600;color:var(--bone);display:inline-flex;align-items:center;gap:8px}
-  .card .go .arw{transition:transform .2s}
-  .card:hover .go .arw{transform:translate(4px,-2px)}
-  .badge-live{position:absolute;top:22px;right:22px;font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.1em;color:#8be0a4;display:flex;align-items:center;gap:6px}
-  .badge-live::before{content:"";width:6px;height:6px;border-radius:50%;background:#3ddc84;box-shadow:0 0 10px #3ddc84}
-  @media(max-width:900px){.card,.card.wide{grid-column:span 6}.card.feature{grid-template-columns:1fr}}
-  @media(max-width:640px){.card,.card.wide,.card.feature{grid-column:span 12}}
+  .card .go{margin-top:16px;font-weight:600;font-size:13.5px;color:var(--blue);display:inline-flex;align-items:center;gap:6px}
+  .card:hover .go .arw{transform:translate(3px,-2px)}
+  .card .go .arw{transition:transform .18s}
+  .live{position:absolute;top:20px;right:20px;font-family:"Caveat",cursive;font-size:17px;color:var(--green);display:flex;align-items:center;gap:6px}
+  .live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(47,162,77,.16)}
+  .feat-side{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center}
+  .feat-side .big{font-family:"Fraunces",serif;font-weight:900;font-size:34px;color:var(--blue)}
+  .feat-side .cap{font-family:"Caveat",cursive;font-size:20px;color:var(--muted)}
+  @media(max-width:880px){.card,.card.wide{grid-column:span 6}.card.feature{grid-template-columns:1fr}}
+  @media(max-width:600px){.card,.card.wide,.card.feature{grid-column:span 12}}
 
-  .rec-list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
-  .rec{display:grid;grid-template-columns:150px 1fr auto;gap:24px;align-items:baseline;padding:26px 4px;border-bottom:1px solid var(--line);transition:background .2s,padding-left .2s}
-  .rec:hover{background:#0f1218;padding-left:16px}
-  .rec .yr{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent)}
-  .rec .body h4{font-family:"Fraunces",serif;font-weight:600;font-size:22px;letter-spacing:-.01em}
-  .rec .body p{color:var(--muted);font-size:14px;margin-top:4px}
-  .rec .where{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;text-align:right}
-  .fillme{color:var(--accent-2);font-family:"JetBrains Mono",monospace;font-size:11px}
-  @media(max-width:640px){.rec{grid-template-columns:1fr;gap:6px}.rec .where{text-align:left}}
-
-  .end{padding:110px 0 60px;text-align:center;position:relative}
-  .end h2{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(38px,7vw,84px);line-height:.95;letter-spacing:-.03em}
-  .end h2 em{font-style:italic;color:var(--accent)}
-  .end p{color:var(--muted);max-width:440px;margin:22px auto 34px}
-  footer{border-top:1px solid var(--line);padding:34px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
-  footer .mono{font-size:11px}
-  .fnav{display:flex;gap:22px}
-  .fnav a{font-size:13px;color:var(--muted);transition:color .2s}
-  .fnav a:hover{color:var(--accent)}
-
-  .timeline{position:relative;margin-top:20px;padding-left:0}
-  .tl{position:relative;display:grid;grid-template-columns:180px 1fr;gap:30px;padding:0 0 46px 0}
+  .timeline{position:relative;margin-left:6px}
+  .tl{position:relative;display:grid;grid-template-columns:150px 1fr;gap:26px;padding:0 0 40px 0}
   .tl:last-child{padding-bottom:0}
-  .tl-rail{position:relative;display:flex;flex-direction:column;align-items:flex-start}
-  .tl-phase{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-  .tl-yr{font-family:"Fraunces",serif;font-weight:900;font-size:20px;margin-top:4px}
-  .tl-body{position:relative;border-left:1px solid var(--line);padding:0 0 0 30px;margin-left:6px}
-  .tl-body::before{content:"";position:absolute;left:-6px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(47,107,255,.15)}
-  .tl:nth-child(2) .tl-body::before{background:var(--accent-2);box-shadow:0 0 0 4px rgba(255,92,53,.15)}
-  .tl-body h4{font-family:"Fraunces",serif;font-weight:600;font-size:23px;letter-spacing:-.01em}
-  .tl-body p{color:var(--muted);font-size:14.5px;margin-top:6px;max-width:560px}
-  @media(max-width:640px){.tl{grid-template-columns:1fr;gap:8px}.tl-body{padding-left:22px}}
+  .tl-rail .ph{font-family:"Caveat",cursive;font-weight:700;font-size:20px}
+  .tl-rail .yr{font-family:"Fraunces",serif;font-weight:900;font-size:19px;margin-top:2px;line-height:1.1}
+  .tl-body{position:relative;border-left:2px solid var(--line);padding-left:28px;margin-left:4px}
+  .tl-body::before{content:"";position:absolute;left:-9px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid var(--blue)}
+  .tl:nth-child(1) .tl-body::before{border-color:var(--blue)} .tl:nth-child(1) .ph{color:var(--blue)}
+  .tl:nth-child(2) .tl-body::before{border-color:var(--orange)} .tl:nth-child(2) .ph{color:var(--orange)}
+  .tl:nth-child(3) .tl-body::before{border-color:var(--teal)} .tl:nth-child(3) .ph{color:var(--teal)}
+  .tl:nth-child(4) .tl-body::before{border-color:var(--green)} .tl:nth-child(4) .ph{color:var(--green)}
+  .tl:nth-child(5) .tl-body::before{border-color:var(--violet)} .tl:nth-child(5) .ph{color:var(--violet)}
+  .tl-body h4{font-family:"Fraunces",serif;font-weight:600;font-size:22px;letter-spacing:-.01em}
+  .tl-body p{color:var(--muted);font-size:14.5px;margin-top:5px;max-width:600px}
+  @media(max-width:600px){.tl{grid-template-columns:1fr;gap:6px}.tl-body{padding-left:22px}}
 
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .recs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .rec{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;position:relative;transition:transform .18s,box-shadow .18s}
+  .rec:hover{transform:translateY(-4px) rotate(.6deg);box-shadow:0 14px 26px rgba(30,50,90,.12)}
+  .rec .em{font-size:28px}
+  .rec .yr{font-family:"Caveat",cursive;font-size:19px;color:var(--orange);margin-top:8px}
+  .rec h4{font-family:"Fraunces",serif;font-weight:600;font-size:21px;margin-top:2px}
+  .rec p{color:var(--muted);font-size:14px;margin-top:7px}
+  @media(max-width:760px){.recs{grid-template-columns:1fr}}
+
+  .end{padding:80px 0 40px;text-align:center;position:relative}
+  .end .pre{font-family:"Caveat",cursive;font-size:26px;color:var(--muted)}
+  .end h2{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(38px,7vw,76px);line-height:.95;letter-spacing:-.03em;margin-top:4px}
+  .end h2 em{font-style:italic;color:var(--blue)}
+  .btnrow{display:flex;gap:12px;justify-content:center;margin-top:28px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:100px;font-weight:600;font-size:14.5px;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.solid{background:var(--blue);color:#fff}
+  .btn.ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  footer{border-top:1px dashed var(--line);margin-top:40px;padding:26px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+  footer .hand{font-size:20px;color:var(--muted)}
+  .fnav{display:flex;gap:18px}
+  .fnav a{font-size:13px;color:var(--muted)}
+  .fnav a:hover{color:var(--blue)}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
 </style>
 </head>
 <body>
 
-<nav id="nav">
+<nav>
   <div class="wrap nav-inner">
-    <div class="brand">Rhythm<span>.</span></div>
-    <div class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#journey">Journey</a>
-      <a href="#recognition">Recognition</a>
-      <a href="#contact">Contact</a>
+    <div class="brand"><span class="plane">✈️</span> Rhythm<span>.</span></div>
+    <div class="navbtns">
+      <a href="#top" title="Home">🏠</a>
+      <a href="#work" title="Work">🛠️</a>
+      <a href="#journey" title="Journey">🧭</a>
+      <a href="#recognition" title="Recognition">🏆</a>
+      <a href="#contact" title="Contact">✉️</a>
     </div>
   </div>
 </nav>
 
-<header class="hero">
-  <div class="hero-grid"></div>
-  <div class="blob a"></div>
-  <div class="blob b"></div>
-  <div class="wrap hero-inner">
-    <span class="eyebrow mono"><span class="dot"></span> Founder · Builder · STEM</span>
-    <h1 class="hero-title">Building a<br/>future where<br/>everyone gets<br/>to <em>build.</em></h1>
-    <p class="hero-sub">I'm Rhythm — founder of Minorities in STEM and a builder shipping AI tools, web platforms, and blockchain projects that widen access to technology.</p>
-    <div class="hero-cta">
-      <a class="btn solid" href="#work">See the work <span>→</span></a>
-      <a class="btn ghost" href="https://github.com/Rhythmofthebeat" target="_blank" rel="noopener">GitHub</a>
+<header class="hero" id="top">
+  <span class="sticker" style="top:120px;right:6%;transform:rotate(12deg)">✈️</span>
+  <span class="sticker" style="top:300px;left:3%;transform:rotate(-10deg)">⚡</span>
+  <span class="sticker" style="top:70px;left:44%;font-size:22px;transform:rotate(8deg)">⭐</span>
+  <span class="sticker" style="bottom:120px;right:40%;font-size:24px;transform:rotate(-6deg)">🪐</span>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kick"><span class="d"></span> founder · builder · STEM</span>
+      <h1 class="name">Rhythm<span class="dot">.</span></h1>
+      <p class="lede">Hi, I'm Rhythm — a <span class="u b">builder</span>, founder of <span class="u g">Minorities in STEM</span>, and a <span class="u o">STEM-equity advocate</span> working on <span class="u t">AI, web &amp; blockchain</span> to widen access to technology.</p>
+      <a class="email" href="mailto:bazarirhythm@gmail.com">bazarirhythm <span class="at">@</span> gmail <span class="dt">.</span> com</a>
+      <div class="socials">
+        <a href="https://github.com/Rhythmofthebeat" target="_blank" rel="noopener" title="GitHub">🐙</a>
+        <a href="https://minoritiesinstem.org" target="_blank" rel="noopener" title="Minorities in STEM">🌐</a>
+        <a href="mailto:bazarirhythm@gmail.com" title="Email">✉️</a>
+      </div>
+    </div>
+
+    <div class="frame">
+      <span class="tape"></span>
+      <div class="frame-inner">
+        <span class="bigplane">🚀</span>
+        <h3 class="serif">Building a future<br/>where everyone<br/>gets to build.</h3>
+        <p>ideas → shipped things ✦</p>
+        <div class="mini">
+          <span class="chip">15+ projects</span>
+          <span class="chip">80k+ impacted</span>
+          <span class="chip">20+ chapters</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="seen reveal">
+      <div class="lbl">✦ recognized by</div>
+      <div class="seen-row">
+        <span class="badge"><span class="ic">🕊️</span> United Nations</span>
+        <span class="badge"><span class="ic">🏔️</span> Aspen Institute</span>
+        <span class="badge"><span class="ic">🎓</span> Woodward Academy</span>
+        <span class="badge"><span class="ic">🎤</span> National &amp; global conferences</span>
+      </div>
     </div>
   </div>
 </header>
 
-<section id="stats">
-  <div class="wrap">
-    <div class="stats reveal">
-      <div class="stat"><div class="num"><b>15</b>+</div><div class="lbl">Projects shipped</div></div>
-      <div class="stat"><div class="num"><b>686</b></div><div class="lbl">Contributions / year</div></div>
-      <div class="stat"><div class="num"><b>80k</b>+</div><div class="lbl">People impacted via MIS</div></div>
-      <div class="stat"><div class="num"><b>20</b>+</div><div class="lbl">MIS chapters</div></div>
-    </div>
-  </div>
-</section>
-
 <section id="work">
   <div class="wrap">
     <div class="sec-head reveal">
-      <h2>Selected work</h2>
-      <p>AI, web, and blockchain projects — built to expand who gets access to technology.</p>
+      <span class="em">🛠️</span>
+      <h2>Stuff I've built</h2>
+      <span class="sub">AI, web &amp; blockchain — built to widen who gets access.</span>
     </div>
 
     <div class="grid">
       <a class="card feature reveal" href="https://minoritiesinstem.org" target="_blank" rel="noopener">
         <div>
-          <span class="tag">Founder · Organization</span>
+          <span class="tag" style="color:var(--green)">founder · organization ✦</span>
           <h3 class="serif">Minorities in STEM</h3>
           <p>Founded in 2024 at Woodward Academy to bridge the gap between minorities and STEM — building access, community, and opportunity for underrepresented students across 20+ chapters.</p>
           <span class="go">Visit minoritiesinstem.org <span class="arw">↗</span></span>
         </div>
-        <div style="align-self:stretch;border-left:1px solid var(--line);padding-left:24px;display:flex;flex-direction:column;justify-content:center;gap:14px">
-          <div class="mono">Impact</div>
-          <div class="serif" style="font-size:30px;font-weight:900">80k+ reached</div>
-          <div class="mono">300+ volunteers · 20+ chapters</div>
+        <div class="feat-side">
+          <div class="big">80k+</div>
+          <div class="cap">people reached</div>
+          <div class="mini" style="margin-top:12px"><span class="chip">300+ volunteers</span><span class="chip">20+ chapters</span></div>
         </div>
       </a>
 
       <a class="card wide reveal" href="https://v0-whogetstobuild.vercel.app/" target="_blank" rel="noopener">
-        <span class="badge-live">LIVE</span>
-        <span class="tag">Access · Product</span>
+        <span class="live">live</span>
+        <span class="tag" style="color:var(--blue)">access · product</span>
         <h3>Who Gets to Build?</h3>
         <p>A project broadening who gets access to building, creating, and shaping technology.</p>
         <span class="go">Visit project <span class="arw">↗</span></span>
       </a>
 
       <a class="card wide reveal" href="https://ai-literacy-chi.vercel.app/" target="_blank" rel="noopener">
-        <span class="badge-live">LIVE</span>
-        <span class="tag">Education · AI</span>
+        <span class="live">live</span>
+        <span class="tag" style="color:var(--teal)">education · AI</span>
         <h3>AI Literacy</h3>
         <p>Resources and learning experiences that help students understand AI clearly, responsibly, and confidently.</p>
         <span class="go">Visit project <span class="arw">↗</span></span>
       </a>
 
       <a class="card reveal" href="https://ste-mbud.vercel.app/" target="_blank" rel="noopener">
-        <span class="badge-live">LIVE</span>
-        <span class="tag">AI · EdTech</span>
+        <span class="live">live</span>
+        <span class="tag" style="color:var(--violet)">AI · EdTech</span>
         <h3>STEMbud</h3>
         <p>An AI STEM study partner that explains concepts, generates quizzes, and tracks learning progress.</p>
         <span class="go">Visit project <span class="arw">↗</span></span>
       </a>
 
       <a class="card reveal" href="https://upgive.org" target="_blank" rel="noopener">
-        <span class="tag">Nonprofit · Web</span>
+        <span class="tag" style="color:var(--orange)">nonprofit · web</span>
         <h3>UpGive</h3>
         <p>A platform connecting generosity with impact — making it easier to give back to the community.</p>
         <span class="go">upgive.org <span class="arw">↗</span></span>
       </a>
 
       <a class="card reveal" href="https://nitjam.org" target="_blank" rel="noopener">
-        <span class="tag">Community · Web</span>
+        <span class="tag" style="color:var(--green)">community · web</span>
         <h3>NITJAM</h3>
         <p>A community-driven initiative bringing people together around building and collaboration.</p>
         <span class="go">nitjam.org <span class="arw">↗</span></span>
       </a>
 
       <a class="card reveal" href="https://github.com/Rhythmofthebeat/Crypto" target="_blank" rel="noopener">
-        <span class="tag">Blockchain · Solidity</span>
+        <span class="tag" style="color:var(--blue)">blockchain · solidity</span>
         <h3>ERC-20 Token</h3>
         <p>Designed and deployed a smart contract for an ERC-20 token on Ethereum.</p>
         <span class="go">View on GitHub <span class="arw">↗</span></span>
       </a>
 
       <a class="card reveal" href="https://github.com/Rhythmofthebeat/Chatbot" target="_blank" rel="noopener">
-        <span class="tag">AI · TypeScript</span>
+        <span class="tag" style="color:var(--teal)">AI · TypeScript</span>
         <h3>ChatNova</h3>
         <p>A conversational AI assistant built in TypeScript — one of my first two projects.</p>
         <span class="go">View on GitHub <span class="arw">↗</span></span>
       </a>
 
       <a class="card reveal" href="https://github.com/Rhythmofthebeat/ImageGenerator" target="_blank" rel="noopener">
-        <span class="tag">AI · Generative</span>
+        <span class="tag" style="color:var(--orange)">AI · generative</span>
         <h3>Image Generator</h3>
-        <p>A generative image tool turning prompts into visuals.</p>
+        <p>A generative image tool turning prompts into visuals — my very first build.</p>
         <span class="go">View on GitHub <span class="arw">↗</span></span>
       </a>
 
       <a class="card reveal" href="https://github.com/Rhythmofthebeat/Machine-Learning" target="_blank" rel="noopener">
-        <span class="tag">ML · Python</span>
+        <span class="tag" style="color:var(--violet)">ML · Python</span>
         <h3>Machine Learning</h3>
         <p>Experiments and models exploring core machine-learning techniques in Python.</p>
         <span class="go">View on GitHub <span class="arw">↗</span></span>
@@ -261,35 +314,17 @@
   </div>
 </section>
 
-<section id="mis" style="padding-top:20px">
-  <div class="wrap">
-    <div class="card feature reveal" style="grid-column:span 12">
-      <div>
-        <span class="tag">Mission</span>
-        <h3 class="serif">Rooted in diversity.<br/>Growing through STEM.</h3>
-        <p>Everything I build points at the same goal: a future where every voice in STEM is heard, valued, and empowered — and where access to building technology isn't decided by who you are or where you start.</p>
-      </div>
-      <div style="align-self:stretch;border-left:1px solid var(--line);padding-left:24px;display:flex;flex-direction:column;justify-content:center;gap:12px">
-        <div class="mono">Founded</div>
-        <div class="serif" style="font-size:26px;font-weight:900">Woodward Academy · 2024</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="journey">
   <div class="wrap">
     <div class="sec-head reveal">
+      <span class="em">🧭</span>
       <h2>The journey</h2>
-      <p>How a couple of first builds spiraled into a full CS practice — and a movement.</p>
+      <span class="sub">how a couple of first builds spiraled into a movement.</span>
     </div>
     <div class="timeline reveal">
 
       <div class="tl">
-        <div class="tl-rail">
-          <span class="tl-phase">Phase 01</span>
-          <span class="tl-yr">The start</span>
-        </div>
+        <div class="tl-rail"><div class="ph">phase 01</div><div class="yr">The start</div></div>
         <div class="tl-body">
           <h4>Image Generator &amp; ChatNova</h4>
           <p>My first two builds — a generative image tool and an AI chat assistant, ChatNova. This is where I fell for building things from scratch.</p>
@@ -297,10 +332,7 @@
       </div>
 
       <div class="tl">
-        <div class="tl-rail">
-          <span class="tl-phase">Phase 02</span>
-          <span class="tl-yr">First community project</span>
-        </div>
+        <div class="tl-rail"><div class="ph">phase 02</div><div class="yr">First community project</div></div>
         <div class="tl-body">
           <h4>Avants AI</h4>
           <p>Avants AI was my first project built for a community, not just for myself — the moment building became about people and impact.</p>
@@ -308,24 +340,26 @@
       </div>
 
       <div class="tl">
-        <div class="tl-rail">
-          <span class="tl-phase">Phase 03</span>
-          <span class="tl-yr">CS spirals out</span>
-        </div>
+        <div class="tl-rail"><div class="ph">phase 03</div><div class="yr">CS spirals out</div></div>
         <div class="tl-body">
           <h4>Machine learning, crypto &amp; the web</h4>
-          <p>From there, computer-science projects spiraled — machine learning, an ERC-20 smart contract, web platforms, and AI-education tools like STEMbud and AI Literacy.</p>
+          <p>From there, computer-science projects spiraled — machine learning, an ERC-20 smart contract, web platforms, and AI-education tools.</p>
         </div>
       </div>
 
       <div class="tl">
-        <div class="tl-rail">
-          <span class="tl-phase">Phase 04</span>
-          <span class="tl-yr">A movement</span>
-        </div>
+        <div class="tl-rail"><div class="ph">phase 04</div><div class="yr">A movement</div></div>
         <div class="tl-body">
           <h4>Minorities in STEM</h4>
           <p>It all converged into Minorities in STEM — turning personal building into access, community, and opportunity for thousands of students.</p>
+        </div>
+      </div>
+
+      <div class="tl">
+        <div class="tl-rail"><div class="ph">phase 05</div><div class="yr">AI, for community</div></div>
+        <div class="tl-body">
+          <h4>The AI projects spiral again</h4>
+          <p>After Minorities in STEM, the AI community projects spiraled out again — STEMbud, AI Literacy, Who Gets to Build?, UpGive, and NITJAM — this time building AI tools squarely for people and impact.</p>
         </div>
       </div>
 
@@ -336,70 +370,59 @@
 <section id="recognition">
   <div class="wrap">
     <div class="sec-head reveal">
+      <span class="em">🏆</span>
       <h2>Recognition</h2>
-      <p>Conferences, programs, and institutions where this work has been recognized.</p>
+      <span class="sub">programs &amp; stages where the work has been recognized.</span>
     </div>
-    <div class="rec-list reveal">
-
+    <div class="recs reveal">
       <div class="rec">
-        <div class="yr">Selected</div>
-        <div class="body">
-          <h4>United Nations</h4>
-          <p>Accepted to participate in a United Nations program — advancing youth leadership in STEM and equity.</p>
-        </div>
-        <div class="where">United Nations</div>
+        <div class="em">🕊️</div>
+        <div class="yr">selected</div>
+        <h4>United Nations</h4>
+        <p>Accepted to participate in a United Nations program — advancing youth leadership in STEM and equity.</p>
       </div>
-
       <div class="rec">
-        <div class="yr">Selected</div>
-        <div class="body">
-          <h4>Aspen Institute</h4>
-          <p>Accepted to an Aspen Institute program recognizing emerging leaders and changemakers.</p>
-        </div>
-        <div class="where">Aspen Institute</div>
+        <div class="em">🏔️</div>
+        <div class="yr">selected</div>
+        <h4>Aspen Institute</h4>
+        <p>Accepted to an Aspen Institute program recognizing emerging leaders and changemakers.</p>
       </div>
-
       <div class="rec">
-        <div class="yr">Ongoing</div>
-        <div class="body">
-          <h4>Conferences &amp; Convenings</h4>
-          <p>Invited to and attended national and international conferences on STEM access, education, and inclusion.</p>
-        </div>
-        <div class="where">Various</div>
+        <div class="em">🎤</div>
+        <div class="yr">ongoing</div>
+        <h4>Conferences &amp; Convenings</h4>
+        <p>Invited to and attended national and international conferences on STEM access, education, and inclusion.</p>
       </div>
-
     </div>
   </div>
 </section>
 
 <section class="end" id="contact">
-  <div class="hero-grid" style="opacity:.15"></div>
-  <div class="wrap" style="position:relative;z-index:2">
-    <h2 class="reveal">Let's <em>build</em><br/>something.</h2>
-    <p class="reveal">Open to collaborations, chapters, mentorship, and new projects across STEM.</p>
-    <div class="hero-cta reveal" style="justify-content:center">
-      <a class="btn solid" href="mailto:bazarirhythm@gmail.com">Get in touch</a>
-      <a class="btn ghost" href="https://github.com/Rhythmofthebeat" target="_blank" rel="noopener">GitHub ↗</a>
+  <span class="sticker" style="top:30px;left:16%;transform:rotate(-12deg)">✏️</span>
+  <span class="sticker" style="top:60px;right:16%;transform:rotate(10deg)">💡</span>
+  <div class="wrap">
+    <div class="pre reveal">psst — got an idea?</div>
+    <h2 class="reveal">Let's <em>build</em> something.</h2>
+    <div class="btnrow reveal">
+      <a class="btn solid" href="mailto:bazarirhythm@gmail.com">Get in touch ✉️</a>
+      <a class="btn ghost" href="https://github.com/Rhythmofthebeat" target="_blank" rel="noopener">GitHub 🐙</a>
     </div>
+  </div>
+  <div class="wrap">
+    <footer>
+      <div class="hand">made with purpose ✦ © 2026 Rhythm</div>
+      <div class="fnav">
+        <a href="#work">Work</a>
+        <a href="#journey">Journey</a>
+        <a href="#recognition">Recognition</a>
+        <a href="https://minoritiesinstem.org" target="_blank" rel="noopener">MIS</a>
+      </div>
+    </footer>
   </div>
 </section>
 
-<footer>
-  <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;width:100%;flex-wrap:wrap;gap:14px">
-    <div class="mono">© 2026 Rhythm · Built with purpose</div>
-    <div class="fnav">
-      <a href="#work">Work</a>
-      <a href="https://minoritiesinstem.org" target="_blank" rel="noopener">MIS</a>
-      <a href="#recognition">Recognition</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</footer>
-
 <script>
-  const nav=document.getElementById('nav');
-  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
-  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
