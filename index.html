@@ -3,312 +3,248 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Rhythm — Builder, Founder, STEM</title>
-<meta name="description" content="Portfolio of Rhythm — founder of Minorities in STEM, builder of AI, web, and blockchain projects widening access to technology." />
+<title>Rhythm — Founder, Builder, STEM</title>
+<meta name="description" content="Rhythm — founder of Minorities in STEM, builder of AI, web, and blockchain projects, recognized by the United Nations and Aspen Institute." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,900&family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --paper:#eaf0f7;
+    --bg:#fbfaf8;
     --card:#ffffff;
-    --ink:#14171f;
-    --muted:#5b6270;
-    --line:#dbe3ef;
-    --band:#d6e4f6;
-    --dot:#bfcde1;
-    --blue:#2f6bff;
-    --teal:#0aa6a0;
-    --green:#2fa24d;
-    --orange:#ff6a2b;
-    --violet:#6c5ce7;
-    --maxw:1120px;
+    --ink:#17191e;
+    --muted:#6b7180;
+    --faint:#9aa0ad;
+    --line:#e7e5df;
+    --accent:#1f3aa6;
+    --accent-soft:#eef1fb;
+    --maxw:1080px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{
-    background:var(--paper);
-    background-image:radial-gradient(var(--dot) 1.4px,transparent 1.4px);
-    background-size:24px 24px;
-    color:var(--ink);
-    font-family:"Inter",system-ui,sans-serif;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
+  body{background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
-  ::selection{background:var(--blue);color:#fff}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
-  .hand{font-family:"Caveat",cursive}
+  ::selection{background:var(--accent);color:#fff}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px}
   .serif{font-family:"Fraunces",Georgia,serif}
+  .label{font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--faint)}
 
-  .u{position:relative;font-weight:600;white-space:nowrap;padding-bottom:1px}
-  .u::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;border-radius:3px;opacity:.85}
-  .u.b::after{background:var(--blue)} .u.g::after{background:var(--green)}
-  .u.o::after{background:var(--orange)} .u.t::after{background:var(--teal)}
-  .u.v::after{background:var(--violet)}
-  .u.b{color:var(--blue)} .u.g{color:var(--green)} .u.o{color:var(--orange)} .u.t{color:var(--teal)} .u.v{color:var(--violet)}
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(251,250,248,.82);backdrop-filter:blur(9px);border-bottom:1px solid transparent;transition:border-color .3s}
+  nav.on{border-color:var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:19px;letter-spacing:-.01em}
+  .brand b{color:var(--accent)}
+  .nav-links{display:flex;gap:30px}
+  .nav-links a{font-size:13px;font-weight:500;color:var(--muted);transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  @media(max-width:680px){.nav-links{display:none}}
 
-  nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(214,228,246,.86);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.6)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
-  .brand{display:flex;align-items:center;gap:10px;font-family:"Fraunces",serif;font-weight:900;font-size:20px}
-  .brand .plane{font-size:20px;transform:rotate(-8deg)}
-  .brand span{color:var(--blue)}
-  .navbtns{display:flex;gap:9px}
-  .navbtns a{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:18px;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 1px 0 rgba(20,23,31,.04)}
-  .navbtns a:hover{transform:translateY(-3px) rotate(-4deg);box-shadow:0 6px 14px rgba(47,107,255,.16)}
-  @media(max-width:560px){.navbtns a{width:36px;height:36px;font-size:16px}.brand{font-size:17px}}
+  header{padding:150px 0 70px}
+  .eyebrow{margin-bottom:26px}
+  h1{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(46px,7.5vw,88px);line-height:1.02;letter-spacing:-.025em;max-width:16ch}
+  h1 .a{color:var(--accent)}
+  .sub{margin-top:26px;font-size:clamp(17px,1.7vw,20px);color:#3d424e;max-width:60ch}
+  .cred{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px}
+  .cred .c{font-size:13.5px;font-weight:600;color:var(--ink);display:inline-flex;align-items:center;gap:9px}
+  .cred .c::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .cta{margin-top:38px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:8px;font-size:14px;font-weight:600;transition:transform .15s,background .2s,border-color .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.solid{background:var(--accent);color:#fff}
+  .btn.ghost{border:1px solid var(--line);background:#fff;color:var(--ink)}
+  .btn.ghost:hover{border-color:var(--accent)}
 
-  .sticker{position:absolute;font-size:30px;opacity:.55;filter:saturate(1.1);z-index:0;user-select:none;pointer-events:none}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stat{padding:34px 26px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat .n{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(34px,4vw,46px);line-height:1;letter-spacing:-.02em}
+  .stat .n b{color:var(--accent);font-weight:600}
+  .stat .l{margin-top:10px;font-size:13px;color:var(--muted)}
+  @media(max-width:680px){.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:none}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}}
 
-  header.hero{padding:120px 0 60px;position:relative;overflow:hidden}
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-  .kick{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:100px;padding:6px 14px;font-family:"Caveat",cursive;font-size:19px;color:var(--muted);transform:rotate(-1.5deg);margin-bottom:20px}
-  .kick .d{width:8px;height:8px;border-radius:50%;background:var(--orange)}
-  h1.name{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(58px,9vw,104px);line-height:.9;letter-spacing:-.03em}
-  h1.name .dot{color:var(--blue)}
-  .lede{margin-top:24px;font-size:clamp(17px,1.8vw,20px);color:#2a2f3a;max-width:560px}
-  .email{margin-top:22px;font-family:"Caveat",cursive;font-size:26px;color:var(--ink);display:inline-flex;align-items:center;gap:8px;border-bottom:2px dashed var(--blue);padding-bottom:2px}
-  .email .at,.email .dt{color:var(--orange)}
-  .socials{display:flex;gap:11px;margin-top:26px;flex-wrap:wrap}
-  .socials a{width:46px;height:46px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:14px;font-size:19px;color:var(--ink);transition:transform .15s ease,border-color .15s,box-shadow .15s}
-  .socials a:hover{transform:translateY(-3px);border-color:var(--blue);box-shadow:0 8px 16px rgba(47,107,255,.16)}
+  section{padding:84px 0}
+  .sec-top{margin-bottom:44px}
+  .sec-top h2{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(28px,4vw,42px);letter-spacing:-.02em;margin-top:12px;line-height:1.05}
+  .sec-top p{margin-top:12px;color:var(--muted);max-width:56ch;font-size:15px}
 
-  .frame{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 18px 40px rgba(30,50,90,.12);transform:rotate(2deg)}
-  .frame .tape{position:absolute;width:96px;height:26px;background:rgba(47,107,255,.16);border:1px dashed rgba(47,107,255,.5);top:-13px;left:50%;transform:translateX(-50%) rotate(-3deg);border-radius:3px}
-  .frame-inner{border-radius:14px;background:linear-gradient(160deg,#eaf1ff,#f3f7ff);border:1px solid var(--line);padding:30px 22px;text-align:center;position:relative;overflow:hidden}
-  .frame-inner .bigplane{font-size:74px;display:block;margin:4px 0 10px;transform:rotate(-10deg)}
-  .frame-inner h3{font-family:"Fraunces",serif;font-weight:900;font-size:26px;line-height:1.05}
-  .frame-inner p{font-family:"Caveat",cursive;font-size:22px;color:var(--muted);margin-top:6px}
-  .frame-inner .mini{display:flex;justify-content:center;gap:8px;margin-top:16px;flex-wrap:wrap}
-  .chip{font-size:12px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:100px;padding:5px 11px;color:var(--muted)}
-  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:34px}.frame{max-width:420px;margin:0 auto}}
-
-  .seen{margin-top:54px;border-top:1px dashed var(--line);padding-top:22px}
-  .seen .lbl{font-family:"Caveat",cursive;font-size:22px;color:var(--muted);display:flex;align-items:center;gap:8px;margin-bottom:14px}
-  .seen-row{display:flex;flex-wrap:wrap;gap:12px}
-  .seen-row .badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 15px;font-weight:600;font-size:14px;color:var(--ink)}
-  .seen-row .badge .ic{font-size:16px}
-
-  section{padding:70px 0;position:relative}
-  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:34px}
-  .sec-head .em{font-size:30px}
-  .sec-head h2{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(30px,4.5vw,46px);letter-spacing:-.02em;line-height:1}
-  .sec-head .sub{font-family:"Caveat",cursive;font-size:22px;color:var(--muted);margin-left:auto;max-width:300px;text-align:right}
-  @media(max-width:640px){.sec-head .sub{display:none}}
-
-  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-  .card{grid-column:span 4;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;min-height:210px;position:relative;transition:transform .18s ease,box-shadow .18s ease}
-  .card:hover{transform:translateY(-5px) rotate(-.5deg);box-shadow:0 16px 30px rgba(30,50,90,.12)}
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+  .card{grid-column:span 4;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;min-height:196px;transition:transform .18s,box-shadow .18s,border-color .18s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(23,30,60,.08);border-color:#d8d5cd}
   .card.wide{grid-column:span 6}
-  .card.feature{grid-column:span 12;min-height:auto;display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:center;background:linear-gradient(150deg,#ffffff,#eef4ff)}
-  .card .tag{font-family:"Caveat",cursive;font-size:19px;font-weight:700}
-  .card h3{font-family:"Fraunces",serif;font-weight:600;font-size:24px;margin:8px 0 8px;letter-spacing:-.01em}
-  .card.feature h3{font-size:clamp(28px,3.5vw,40px);font-weight:900}
-  .card p{color:var(--muted);font-size:14.5px;flex:1}
-  .card .go{margin-top:16px;font-weight:600;font-size:13.5px;color:var(--blue);display:inline-flex;align-items:center;gap:6px}
-  .card:hover .go .arw{transform:translate(3px,-2px)}
-  .card .go .arw{transition:transform .18s}
-  .live{position:absolute;top:20px;right:20px;font-family:"Caveat",cursive;font-size:17px;color:var(--green);display:flex;align-items:center;gap:6px}
-  .live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(47,162,77,.16)}
-  .feat-side{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center}
-  .feat-side .big{font-family:"Fraunces",serif;font-weight:900;font-size:34px;color:var(--blue)}
-  .feat-side .cap{font-family:"Caveat",cursive;font-size:20px;color:var(--muted)}
-  @media(max-width:880px){.card,.card.wide{grid-column:span 6}.card.feature{grid-template-columns:1fr}}
-  @media(max-width:600px){.card,.card.wide,.card.feature{grid-column:span 12}}
+  .card.feature{grid-column:span 12;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center;min-height:auto;background:linear-gradient(180deg,#fff,#fafbff)}
+  .card .k{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+  .card h3{font-family:"Fraunces",serif;font-weight:600;font-size:23px;margin:12px 0 9px;letter-spacing:-.01em}
+  .card.feature h3{font-size:clamp(26px,3.4vw,38px)}
+  .card p{color:var(--muted);font-size:14px;flex:1}
+  .card .go{margin-top:16px;font-size:13px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px}
+  .card:hover .go .ar{transform:translateX(3px)}
+  .card .go .ar{transition:transform .18s}
+  .flag{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#1f8f57}
+  .flag::before{content:"";width:7px;height:7px;border-radius:50%;background:#25b56b}
+  .fside{border-left:1px solid var(--line);padding-left:28px}
+  .fside .big{font-family:"Fraunces",serif;font-weight:600;font-size:40px;color:var(--accent);line-height:1}
+  .fside .cap{font-size:13px;color:var(--muted);margin-top:6px}
+  .fside .row{margin-top:16px;display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink)}
+  @media(max-width:860px){.card,.card.wide{grid-column:span 6}.card.feature{grid-template-columns:1fr}.fside{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:22px}}
+  @media(max-width:560px){.card,.card.wide,.card.feature{grid-column:span 12}}
 
-  .timeline{position:relative;margin-left:6px}
-  .tl{position:relative;display:grid;grid-template-columns:150px 1fr;gap:26px;padding:0 0 40px 0}
-  .tl:last-child{padding-bottom:0}
-  .tl-rail .ph{font-family:"Caveat",cursive;font-weight:700;font-size:20px}
-  .tl-rail .yr{font-family:"Fraunces",serif;font-weight:900;font-size:19px;margin-top:2px;line-height:1.1}
-  .tl-body{position:relative;border-left:2px solid var(--line);padding-left:28px;margin-left:4px}
-  .tl-body::before{content:"";position:absolute;left:-9px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid var(--blue)}
-  .tl:nth-child(1) .tl-body::before{border-color:var(--blue)} .tl:nth-child(1) .ph{color:var(--blue)}
-  .tl:nth-child(2) .tl-body::before{border-color:var(--orange)} .tl:nth-child(2) .ph{color:var(--orange)}
-  .tl:nth-child(3) .tl-body::before{border-color:var(--teal)} .tl:nth-child(3) .ph{color:var(--teal)}
-  .tl:nth-child(4) .tl-body::before{border-color:var(--green)} .tl:nth-child(4) .ph{color:var(--green)}
-  .tl:nth-child(5) .tl-body::before{border-color:var(--violet)} .tl:nth-child(5) .ph{color:var(--violet)}
-  .tl-body h4{font-family:"Fraunces",serif;font-weight:600;font-size:22px;letter-spacing:-.01em}
-  .tl-body p{color:var(--muted);font-size:14.5px;margin-top:5px;max-width:600px}
-  @media(max-width:600px){.tl{grid-template-columns:1fr;gap:6px}.tl-body{padding-left:22px}}
+  .timeline{border-top:1px solid var(--line)}
+  .tl{display:grid;grid-template-columns:190px 1fr;gap:30px;padding:30px 0;border-bottom:1px solid var(--line)}
+  .tl .ph .step{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+  .tl .ph .yr{font-family:"Fraunces",serif;font-weight:600;font-size:19px;margin-top:4px;color:var(--ink)}
+  .tl h4{font-family:"Fraunces",serif;font-weight:600;font-size:21px;letter-spacing:-.01em}
+  .tl p{color:var(--muted);font-size:14.5px;margin-top:6px;max-width:64ch}
+  @media(max-width:560px){.tl{grid-template-columns:1fr;gap:8px}}
 
-  .recs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .rec{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;position:relative;transition:transform .18s,box-shadow .18s}
-  .rec:hover{transform:translateY(-4px) rotate(.6deg);box-shadow:0 14px 26px rgba(30,50,90,.12)}
-  .rec .em{font-size:28px}
-  .rec .yr{font-family:"Caveat",cursive;font-size:19px;color:var(--orange);margin-top:8px}
-  .rec h4{font-family:"Fraunces",serif;font-weight:600;font-size:21px;margin-top:2px}
-  .rec p{color:var(--muted);font-size:14px;margin-top:7px}
+  .recs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .rec{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;transition:transform .18s,box-shadow .18s}
+  .rec:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(23,30,60,.08)}
+  .rec .badge{width:44px;height:44px;border-radius:11px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:600;font-size:20px;color:var(--accent)}
+  .rec .st{margin-top:16px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+  .rec h4{font-family:"Fraunces",serif;font-weight:600;font-size:21px;margin-top:4px}
+  .rec p{color:var(--muted);font-size:13.5px;margin-top:8px}
   @media(max-width:760px){.recs{grid-template-columns:1fr}}
 
-  .end{padding:80px 0 40px;text-align:center;position:relative}
-  .end .pre{font-family:"Caveat",cursive;font-size:26px;color:var(--muted)}
-  .end h2{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(38px,7vw,76px);line-height:.95;letter-spacing:-.03em;margin-top:4px}
-  .end h2 em{font-style:italic;color:var(--blue)}
-  .btnrow{display:flex;gap:12px;justify-content:center;margin-top:28px;flex-wrap:wrap}
-  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:100px;font-weight:600;font-size:14.5px;transition:transform .15s}
-  .btn:hover{transform:translateY(-2px)}
-  .btn.solid{background:var(--blue);color:#fff}
-  .btn.ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
-  footer{border-top:1px dashed var(--line);margin-top:40px;padding:26px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-  footer .hand{font-size:20px;color:var(--muted)}
-  .fnav{display:flex;gap:18px}
+  .end{padding:96px 0;text-align:center;border-top:1px solid var(--line)}
+  .end h2{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(34px,6vw,64px);letter-spacing:-.025em;line-height:1.02}
+  .end p{color:var(--muted);margin:18px auto 30px;max-width:46ch}
+  footer{border-top:1px solid var(--line);padding:28px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+  footer .m{font-size:13px;color:var(--faint)}
+  .fnav{display:flex;gap:20px}
   .fnav a{font-size:13px;color:var(--muted)}
-  .fnav a:hover{color:var(--blue)}
+  .fnav a:hover{color:var(--accent)}
 
-  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
 </style>
 </head>
 <body>
 
-<nav>
+<nav id="nav">
   <div class="wrap nav-inner">
-    <div class="brand"><span class="plane">✈️</span> Rhythm<span>.</span></div>
-    <div class="navbtns">
-      <a href="#top" title="Home">🏠</a>
-      <a href="#work" title="Work">🛠️</a>
-      <a href="#journey" title="Journey">🧭</a>
-      <a href="#recognition" title="Recognition">🏆</a>
-      <a href="#contact" title="Contact">✉️</a>
+    <div class="brand">Rhythm<b>.</b></div>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#journey">Story</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
 
-<header class="hero" id="top">
-  <span class="sticker" style="top:120px;right:6%;transform:rotate(12deg)">✈️</span>
-  <span class="sticker" style="top:300px;left:3%;transform:rotate(-10deg)">⚡</span>
-  <span class="sticker" style="top:70px;left:44%;font-size:22px;transform:rotate(8deg)">⭐</span>
-  <span class="sticker" style="bottom:120px;right:40%;font-size:24px;transform:rotate(-6deg)">🪐</span>
-  <div class="wrap hero-grid">
-    <div>
-      <span class="kick"><span class="d"></span> founder · builder · STEM</span>
-      <h1 class="name">Rhythm<span class="dot">.</span></h1>
-      <p class="lede">Hi, I'm Rhythm — a <span class="u b">builder</span>, founder of <span class="u g">Minorities in STEM</span>, and a <span class="u o">STEM-equity advocate</span> working on <span class="u t">AI, web &amp; blockchain</span> to widen access to technology.</p>
-      <a class="email" href="mailto:bazarirhythm@gmail.com">bazarirhythm <span class="at">@</span> gmail <span class="dt">.</span> com</a>
-      <div class="socials">
-        <a href="https://github.com/Rhythmofthebeat" target="_blank" rel="noopener" title="GitHub">🐙</a>
-        <a href="https://minoritiesinstem.org" target="_blank" rel="noopener" title="Minorities in STEM">🌐</a>
-        <a href="mailto:bazarirhythm@gmail.com" title="Email">✉️</a>
-      </div>
-    </div>
-
-    <div class="frame">
-      <span class="tape"></span>
-      <div class="frame-inner">
-        <span class="bigplane">🚀</span>
-        <h3 class="serif">Building a future<br/>where everyone<br/>gets to build.</h3>
-        <p>ideas → shipped things ✦</p>
-        <div class="mini">
-          <span class="chip">15+ projects</span>
-          <span class="chip">80k+ impacted</span>
-          <span class="chip">20+ chapters</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
+<header id="top">
   <div class="wrap">
-    <div class="seen reveal">
-      <div class="lbl">✦ recognized by</div>
-      <div class="seen-row">
-        <span class="badge"><span class="ic">🕊️</span> United Nations</span>
-        <span class="badge"><span class="ic">🏔️</span> Aspen Institute</span>
-        <span class="badge"><span class="ic">🎓</span> Woodward Academy</span>
-        <span class="badge"><span class="ic">🎤</span> National &amp; global conferences</span>
-      </div>
+    <div class="eyebrow label reveal">Founder · Builder · STEM</div>
+    <h1 class="reveal">Building a future where everyone gets to <span class="a">build.</span></h1>
+    <p class="sub reveal">I'm Rhythm — founder of Minorities in STEM and a builder shipping AI, web, and blockchain projects that widen access to technology for underrepresented students.</p>
+    <div class="cred reveal">
+      <span class="c">Founder, Minorities in STEM</span>
+      <span class="c">Selected by the United Nations</span>
+      <span class="c">Aspen Institute</span>
+    </div>
+    <div class="cta reveal">
+      <a class="btn solid" href="#work">View the work</a>
+      <a class="btn ghost" href="mailto:bazarirhythm@gmail.com">Get in touch</a>
     </div>
   </div>
 </header>
 
+<div class="wrap">
+  <div class="stats reveal">
+    <div class="stat"><div class="n"><b>80k</b>+</div><div class="l">People reached</div></div>
+    <div class="stat"><div class="n"><b>20</b>+</div><div class="l">Chapters</div></div>
+    <div class="stat"><div class="n"><b>300</b>+</div><div class="l">Volunteers</div></div>
+    <div class="stat"><div class="n"><b>15</b>+</div><div class="l">Projects shipped</div></div>
+  </div>
+</div>
+
 <section id="work">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="em">🛠️</span>
-      <h2>Stuff I've built</h2>
-      <span class="sub">AI, web &amp; blockchain — built to widen who gets access.</span>
+    <div class="sec-top reveal">
+      <div class="label">Selected work</div>
+      <h2>Things I've built.</h2>
+      <p>AI, web, and blockchain projects — each built to widen who gets access to technology.</p>
     </div>
 
     <div class="grid">
       <a class="card feature reveal" href="https://minoritiesinstem.org" target="_blank" rel="noopener">
         <div>
-          <span class="tag" style="color:var(--green)">founder · organization ✦</span>
+          <span class="k">Founder · Organization</span>
           <h3 class="serif">Minorities in STEM</h3>
-          <p>Founded in 2024 at Woodward Academy to bridge the gap between minorities and STEM — building access, community, and opportunity for underrepresented students across 20+ chapters.</p>
-          <span class="go">Visit minoritiesinstem.org <span class="arw">↗</span></span>
+          <p>Founded in 2024 at Woodward Academy to bridge the gap between minorities and STEM — building access, community, and opportunity for underrepresented students across 20+ chapters worldwide.</p>
+          <span class="go">Visit minoritiesinstem.org <span class="ar">→</span></span>
         </div>
-        <div class="feat-side">
+        <div class="fside">
           <div class="big">80k+</div>
-          <div class="cap">people reached</div>
-          <div class="mini" style="margin-top:12px"><span class="chip">300+ volunteers</span><span class="chip">20+ chapters</span></div>
+          <div class="cap">people reached in ~2 years</div>
+          <div class="row"><span>300+ volunteers</span><span>20+ chapters</span><span>Founded at Woodward Academy · 2024</span></div>
         </div>
       </a>
 
       <a class="card wide reveal" href="https://v0-whogetstobuild.vercel.app/" target="_blank" rel="noopener">
-        <span class="live">live</span>
-        <span class="tag" style="color:var(--blue)">access · product</span>
+        <span class="flag">Live</span>
+        <span class="k">Access · Product</span>
         <h3>Who Gets to Build?</h3>
         <p>A project broadening who gets access to building, creating, and shaping technology.</p>
-        <span class="go">Visit project <span class="arw">↗</span></span>
+        <span class="go">Visit project <span class="ar">→</span></span>
       </a>
 
       <a class="card wide reveal" href="https://ai-literacy-chi.vercel.app/" target="_blank" rel="noopener">
-        <span class="live">live</span>
-        <span class="tag" style="color:var(--teal)">education · AI</span>
+        <span class="flag">Live</span>
+        <span class="k">Education · AI</span>
         <h3>AI Literacy</h3>
         <p>Resources and learning experiences that help students understand AI clearly, responsibly, and confidently.</p>
-        <span class="go">Visit project <span class="arw">↗</span></span>
+        <span class="go">Visit project <span class="ar">→</span></span>
       </a>
 
       <a class="card reveal" href="https://ste-mbud.vercel.app/" target="_blank" rel="noopener">
-        <span class="live">live</span>
-        <span class="tag" style="color:var(--violet)">AI · EdTech</span>
+        <span class="flag">Live</span>
+        <span class="k">AI · EdTech</span>
         <h3>STEMbud</h3>
         <p>An AI STEM study partner that explains concepts, generates quizzes, and tracks learning progress.</p>
-        <span class="go">Visit project <span class="arw">↗</span></span>
+        <span class="go">Visit project <span class="ar">→</span></span>
       </a>
 
       <a class="card reveal" href="https://upgive.org" target="_blank" rel="noopener">
-        <span class="tag" style="color:var(--orange)">nonprofit · web</span>
+        <span class="k">Nonprofit · Web</span>
         <h3>UpGive</h3>
         <p>A platform connecting generosity with impact — making it easier to give back to the community.</p>
-        <span class="go">upgive.org <span class="arw">↗</span></span>
+        <span class="go">upgive.org <span class="ar">→</span></span>
       </a>
 
       <a class="card reveal" href="https://nitjam.org" target="_blank" rel="noopener">
-        <span class="tag" style="color:var(--green)">community · web</span>
+        <span class="k">Community · Web</span>
         <h3>NITJAM</h3>
         <p>A community-driven initiative bringing people together around building and collaboration.</p>
-        <span class="go">nitjam.org <span class="arw">↗</span></span>
+        <span class="go">nitjam.org <span class="ar">→</span></span>
       </a>
 
       <a class="card reveal" href="https://github.com/Rhythmofthebeat/Crypto" target="_blank" rel="noopener">
-        <span class="tag" style="color:var(--blue)">blockchain · solidity</span>
+        <span class="k">Blockchain · Solidity</span>
         <h3>ERC-20 Token</h3>
         <p>Designed and deployed a smart contract for an ERC-20 token on Ethereum.</p>
-        <span class="go">View on GitHub <span class="arw">↗</span></span>
+        <span class="go">View on GitHub <span class="ar">→</span></span>
       </a>
 
       <a class="card reveal" href="https://github.com/Rhythmofthebeat/Chatbot" target="_blank" rel="noopener">
-        <span class="tag" style="color:var(--teal)">AI · TypeScript</span>
+        <span class="k">AI · TypeScript</span>
         <h3>ChatNova</h3>
         <p>A conversational AI assistant built in TypeScript — one of my first two projects.</p>
-        <span class="go">View on GitHub <span class="arw">↗</span></span>
+        <span class="go">View on GitHub <span class="ar">→</span></span>
       </a>
 
       <a class="card reveal" href="https://github.com/Rhythmofthebeat/ImageGenerator" target="_blank" rel="noopener">
-        <span class="tag" style="color:var(--orange)">AI · generative</span>
+        <span class="k">AI · Generative</span>
         <h3>Image Generator</h3>
         <p>A generative image tool turning prompts into visuals — my very first build.</p>
-        <span class="go">View on GitHub <span class="arw">↗</span></span>
+        <span class="go">View on GitHub <span class="ar">→</span></span>
       </a>
 
       <a class="card reveal" href="https://github.com/Rhythmofthebeat/Machine-Learning" target="_blank" rel="noopener">
-        <span class="tag" style="color:var(--violet)">ML · Python</span>
+        <span class="k">ML · Python</span>
         <h3>Machine Learning</h3>
         <p>Experiments and models exploring core machine-learning techniques in Python.</p>
-        <span class="go">View on GitHub <span class="arw">↗</span></span>
+        <span class="go">View on GitHub <span class="ar">→</span></span>
       </a>
     </div>
   </div>
@@ -316,80 +252,59 @@
 
 <section id="journey">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="em">🧭</span>
-      <h2>The journey</h2>
-      <span class="sub">how a couple of first builds spiraled into a movement.</span>
+    <div class="sec-top reveal">
+      <div class="label">The story</div>
+      <h2>How it all spiraled.</h2>
+      <p>From a couple of first builds to a movement — and back into building AI for the community.</p>
     </div>
     <div class="timeline reveal">
-
       <div class="tl">
-        <div class="tl-rail"><div class="ph">phase 01</div><div class="yr">The start</div></div>
-        <div class="tl-body">
-          <h4>Image Generator &amp; ChatNova</h4>
-          <p>My first two builds — a generative image tool and an AI chat assistant, ChatNova. This is where I fell for building things from scratch.</p>
-        </div>
+        <div class="ph"><div class="step">Phase 01</div><div class="yr">The start</div></div>
+        <div><h4>Image Generator &amp; ChatNova</h4><p>My first two builds — a generative image tool and an AI chat assistant, ChatNova. This is where I fell for building things from scratch.</p></div>
       </div>
-
       <div class="tl">
-        <div class="tl-rail"><div class="ph">phase 02</div><div class="yr">First community project</div></div>
-        <div class="tl-body">
-          <h4>Avants AI</h4>
-          <p>Avants AI was my first project built for a community, not just for myself — the moment building became about people and impact.</p>
-        </div>
+        <div class="ph"><div class="step">Phase 02</div><div class="yr">First community project</div></div>
+        <div><h4>Avants AI</h4><p>Avants AI was my first project built for a community, not just for myself — the moment building became about people and impact.</p></div>
       </div>
-
       <div class="tl">
-        <div class="tl-rail"><div class="ph">phase 03</div><div class="yr">CS spirals out</div></div>
-        <div class="tl-body">
-          <h4>Machine learning, crypto &amp; the web</h4>
-          <p>From there, computer-science projects spiraled — machine learning, an ERC-20 smart contract, web platforms, and AI-education tools.</p>
-        </div>
+        <div class="ph"><div class="step">Phase 03</div><div class="yr">CS spirals out</div></div>
+        <div><h4>Machine learning, crypto &amp; the web</h4><p>From there, computer-science projects spiraled — machine learning, an ERC-20 smart contract, web platforms, and AI-education tools.</p></div>
       </div>
-
       <div class="tl">
-        <div class="tl-rail"><div class="ph">phase 04</div><div class="yr">A movement</div></div>
-        <div class="tl-body">
-          <h4>Minorities in STEM</h4>
-          <p>It all converged into Minorities in STEM — turning personal building into access, community, and opportunity for thousands of students.</p>
-        </div>
+        <div class="ph"><div class="step">Phase 04</div><div class="yr">A movement</div></div>
+        <div><h4>Minorities in STEM</h4><p>It all converged into Minorities in STEM — turning personal building into access, community, and opportunity for thousands of students.</p></div>
       </div>
-
       <div class="tl">
-        <div class="tl-rail"><div class="ph">phase 05</div><div class="yr">AI, for community</div></div>
-        <div class="tl-body">
-          <h4>The AI projects spiral again</h4>
-          <p>After Minorities in STEM, the AI community projects spiraled out again — STEMbud, AI Literacy, Who Gets to Build?, UpGive, and NITJAM — this time building AI tools squarely for people and impact.</p>
-        </div>
+        <div class="ph"><div class="step">Phase 05</div><div class="yr">AI, for community</div></div>
+        <div><h4>The AI projects spiral again</h4><p>After Minorities in STEM, the AI community projects spiraled out again — STEMbud, AI Literacy, Who Gets to Build?, UpGive, and NITJAM — this time building AI tools squarely for people and impact.</p></div>
       </div>
-
     </div>
   </div>
 </section>
 
 <section id="recognition">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="em">🏆</span>
-      <h2>Recognition</h2>
-      <span class="sub">programs &amp; stages where the work has been recognized.</span>
+    <div class="sec-top reveal">
+      <div class="label">Recognition</div>
+      <h2>Where the work has been recognized.</h2>
+      <p>Programs and institutions that have selected or featured the work.</p>
     </div>
     <div class="recs reveal">
       <div class="rec">
-        <div class="em">🕊️</div>
-        <div class="yr">selected</div>
+        <div class="badge">UN</div>
+        <div class="st">Selected</div>
         <h4>United Nations</h4>
-        <p>Accepted to participate in a United Nations program — advancing youth leadership in STEM and equity.</p>
+        <p>Accepted to participate in a United Nations program advancing youth leadership in STEM and equity.</p>
       </div>
       <div class="rec">
-        <div class="em">🏔️</div>
-        <div class="yr">selected</div>
+        <div class="badge">AI</div>
+        <div class="st">Selected</div>
         <h4>Aspen Institute</h4>
-        <p>Accepted to an Aspen Institute program recognizing emerging leaders and changemakers.</p>
+        <p>Selected for an Aspen Institute program recognizing emerging leaders and changemakers.</p>
       </div>
       <div class="rec">
-        <div class="em">🎤</div>
-        <div class="yr">ongoing</div>
+        <div class="badge">C</div>
+        <div class="st">Ongoing</div>
         <h4>Conferences &amp; Convenings</h4>
         <p>Invited to and attended national and international conferences on STEM access, education, and inclusion.</p>
       </div>
@@ -398,31 +313,33 @@
 </section>
 
 <section class="end" id="contact">
-  <span class="sticker" style="top:30px;left:16%;transform:rotate(-12deg)">✏️</span>
-  <span class="sticker" style="top:60px;right:16%;transform:rotate(10deg)">💡</span>
   <div class="wrap">
-    <div class="pre reveal">psst — got an idea?</div>
-    <h2 class="reveal">Let's <em>build</em> something.</h2>
-    <div class="btnrow reveal">
-      <a class="btn solid" href="mailto:bazarirhythm@gmail.com">Get in touch ✉️</a>
-      <a class="btn ghost" href="https://github.com/Rhythmofthebeat" target="_blank" rel="noopener">GitHub 🐙</a>
+    <div class="label reveal" style="margin-bottom:14px">Get in touch</div>
+    <h2 class="reveal">Let's build something.</h2>
+    <p class="reveal">Open to collaborations, chapters, mentorship, research, and new projects across STEM.</p>
+    <div class="cta reveal" style="justify-content:center">
+      <a class="btn solid" href="mailto:bazarirhythm@gmail.com">Email me</a>
+      <a class="btn ghost" href="https://github.com/Rhythmofthebeat" target="_blank" rel="noopener">GitHub</a>
     </div>
-  </div>
-  <div class="wrap">
-    <footer>
-      <div class="hand">made with purpose ✦ © 2026 Rhythm</div>
-      <div class="fnav">
-        <a href="#work">Work</a>
-        <a href="#journey">Journey</a>
-        <a href="#recognition">Recognition</a>
-        <a href="https://minoritiesinstem.org" target="_blank" rel="noopener">MIS</a>
-      </div>
-    </footer>
   </div>
 </section>
 
+<div class="wrap">
+  <footer>
+    <div class="m">© 2026 Rhythm</div>
+    <div class="fnav">
+      <a href="#work">Work</a>
+      <a href="#journey">Story</a>
+      <a href="#recognition">Recognition</a>
+      <a href="https://minoritiesinstem.org" target="_blank" rel="noopener">Minorities in STEM</a>
+    </div>
+  </footer>
+</div>
+
 <script>
-  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>18));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
