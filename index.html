@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Rhythm — Founder, Builder, STEM</title>
-<meta name="description" content="Rhythm — founder of Minorities in STEM, builder of AI, web, and blockchain projects, recognized by the United Nations and Aspen Institute." />
+<title>Rhythm | Founder, Builder, STEM</title>
+<meta name="description" content="Rhythm, founder of Minorities in STEM and builder of AI, web, and blockchain projects. Every project, the code behind it, and the timeline from 9th grade to now." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
 <style>
   :root{
     --bg:#fbfaf8;
@@ -34,16 +34,16 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
   .brand{font-family:"Fraunces",serif;font-weight:600;font-size:19px;letter-spacing:-.01em}
   .brand b{color:var(--accent)}
-  .nav-links{display:flex;gap:30px}
+  .nav-links{display:flex;gap:26px}
   .nav-links a{font-size:13px;font-weight:500;color:var(--muted);transition:color .2s}
   .nav-links a:hover{color:var(--ink)}
-  @media(max-width:680px){.nav-links{display:none}}
+  @media(max-width:760px){.nav-links{display:none}}
 
   header{padding:150px 0 70px}
   .eyebrow{margin-bottom:26px}
   h1{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(46px,7.5vw,88px);line-height:1.02;letter-spacing:-.025em;max-width:16ch}
   h1 .a{color:var(--accent)}
-  .sub{margin-top:26px;font-size:clamp(17px,1.7vw,20px);color:#3d424e;max-width:60ch}
+  .sub{margin-top:26px;font-size:clamp(17px,1.7vw,20px);color:#3d424e;max-width:62ch}
   .cred{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px}
   .cred .c{font-size:13.5px;font-weight:600;color:var(--ink);display:inline-flex;align-items:center;gap:9px}
   .cred .c::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
@@ -63,24 +63,31 @@
   @media(max-width:680px){.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:none}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}}
 
   section{padding:84px 0}
-  .sec-top{margin-bottom:44px}
+  .sec-top{margin-bottom:40px}
   .sec-top h2{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(28px,4vw,42px);letter-spacing:-.02em;margin-top:12px;line-height:1.05}
-  .sec-top p{margin-top:12px;color:var(--muted);max-width:56ch;font-size:15px}
+  .sec-top p{margin-top:12px;color:var(--muted);max-width:58ch;font-size:15px}
+  .grouphead{margin:56px 0 20px;display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--line);padding-top:26px}
+  .grouphead h3{font-family:"Fraunces",serif;font-weight:600;font-size:21px;letter-spacing:-.01em}
+  .grouphead span{font-size:13px;color:var(--faint)}
 
   .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
-  .card{grid-column:span 4;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;min-height:196px;transition:transform .18s,box-shadow .18s,border-color .18s}
-  .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(23,30,60,.08);border-color:#d8d5cd}
+  .card{grid-column:span 4;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;min-height:210px;transition:transform .18s,box-shadow .18s,border-color .18s}
+  a.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(23,30,60,.08);border-color:#d8d5cd}
   .card.wide{grid-column:span 6}
   .card.feature{grid-column:span 12;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center;min-height:auto;background:linear-gradient(180deg,#fff,#fafbff)}
   .card .k{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
-  .card h3{font-family:"Fraunces",serif;font-weight:600;font-size:23px;margin:12px 0 9px;letter-spacing:-.01em}
-  .card.feature h3{font-size:clamp(26px,3.4vw,38px)}
+  .card h4{font-family:"Fraunces",serif;font-weight:600;font-size:22px;margin:11px 0 8px;letter-spacing:-.01em}
+  .card.feature h4{font-size:clamp(26px,3.4vw,38px)}
   .card p{color:var(--muted);font-size:14px;flex:1}
-  .card .go{margin-top:16px;font-size:13px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px}
-  .card:hover .go .ar{transform:translateX(3px)}
+  .card .go{margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px}
+  a.card:hover .go .ar{transform:translateX(3px)}
   .card .go .ar{transition:transform .18s}
-  .flag{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#1f8f57}
+  .stack{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+  .stack span{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:10.5px;font-weight:500;letter-spacing:.02em;color:#4a5163;background:#f3f2ee;border:1px solid var(--line);border-radius:5px;padding:3px 7px}
+  .flag{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#1f8f57;margin-bottom:6px}
   .flag::before{content:"";width:7px;height:7px;border-radius:50%;background:#25b56b}
+  .flag.priv{color:var(--faint)}
+  .flag.priv::before{background:#c4c8d0}
   .fside{border-left:1px solid var(--line);padding-left:28px}
   .fside .big{font-family:"Fraunces",serif;font-weight:600;font-size:40px;color:var(--accent);line-height:1}
   .fside .cap{font-size:13px;color:var(--muted);margin-top:6px}
@@ -89,12 +96,16 @@
   @media(max-width:560px){.card,.card.wide,.card.feature{grid-column:span 12}}
 
   .timeline{border-top:1px solid var(--line)}
-  .tl{display:grid;grid-template-columns:190px 1fr;gap:30px;padding:30px 0;border-bottom:1px solid var(--line)}
+  .tl{display:grid;grid-template-columns:200px 1fr;gap:30px;padding:30px 0;border-bottom:1px solid var(--line)}
   .tl .ph .step{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
   .tl .ph .yr{font-family:"Fraunces",serif;font-weight:600;font-size:19px;margin-top:4px;color:var(--ink)}
   .tl h4{font-family:"Fraunces",serif;font-weight:600;font-size:21px;letter-spacing:-.01em}
-  .tl p{color:var(--muted);font-size:14.5px;margin-top:6px;max-width:64ch}
+  .tl p{color:var(--muted);font-size:14.5px;margin-top:6px;max-width:66ch}
+  .tl .stack{margin-top:12px}
   @media(max-width:560px){.tl{grid-template-columns:1fr;gap:8px}}
+
+  .toolbelt{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .toolbelt span{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;color:#3d424e;background:#fff;border:1px solid var(--line);border-radius:7px;padding:7px 12px}
 
   .recs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
   .rec{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;transition:transform .18s,box-shadow .18s}
@@ -110,7 +121,7 @@
   .end p{color:var(--muted);margin:18px auto 30px;max-width:46ch}
   footer{border-top:1px solid var(--line);padding:28px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
   footer .m{font-size:13px;color:var(--faint)}
-  .fnav{display:flex;gap:20px}
+  .fnav{display:flex;gap:20px;flex-wrap:wrap}
   .fnav a{font-size:13px;color:var(--muted)}
   .fnav a:hover{color:var(--accent)}
 
@@ -125,7 +136,8 @@
     <div class="brand">Rhythm<b>.</b></div>
     <div class="nav-links">
       <a href="#work">Work</a>
-      <a href="#journey">Story</a>
+      <a href="#stack">Stack</a>
+      <a href="#journey">Timeline</a>
       <a href="#recognition">Recognition</a>
       <a href="#contact">Contact</a>
     </div>
@@ -134,9 +146,9 @@
 
 <header id="top">
   <div class="wrap">
-    <div class="eyebrow label reveal">Founder · Builder · STEM</div>
+    <div class="eyebrow label reveal">Founder &middot; Builder &middot; STEM</div>
     <h1 class="reveal">Building a future where everyone gets to <span class="a">build.</span></h1>
-    <p class="sub reveal">I'm Rhythm — founder of Minorities in STEM and a builder shipping AI, web, and blockchain projects that widen access to technology for underrepresented students.</p>
+    <p class="sub reveal">I'm Rhythm, founder of Minorities in STEM and a builder shipping AI, web, and blockchain projects that widen access to technology for underrepresented students. Below is every project, the code behind it, and how one thing led to the next.</p>
     <div class="cred reveal">
       <span class="c">Founder, Minorities in STEM</span>
       <span class="c">Selected by the United Nations</span>
@@ -144,7 +156,7 @@
     </div>
     <div class="cta reveal">
       <a class="btn solid" href="#work">View the work</a>
-      <a class="btn ghost" href="mailto:bazarirhythm@gmail.com">Get in touch</a>
+      <a class="btn ghost" href="#journey">See the timeline</a>
     </div>
   </div>
 </header>
@@ -154,7 +166,7 @@
     <div class="stat"><div class="n"><b>80k</b>+</div><div class="l">People reached</div></div>
     <div class="stat"><div class="n"><b>20</b>+</div><div class="l">Chapters</div></div>
     <div class="stat"><div class="n"><b>300</b>+</div><div class="l">Volunteers</div></div>
-    <div class="stat"><div class="n"><b>15</b>+</div><div class="l">Projects shipped</div></div>
+    <div class="stat"><div class="n"><b>17</b>+</div><div class="l">Projects shipped</div></div>
   </div>
 </div>
 
@@ -162,90 +174,183 @@
   <div class="wrap">
     <div class="sec-top reveal">
       <div class="label">Selected work</div>
-      <h2>Things I've built.</h2>
-      <p>AI, web, and blockchain projects — each built to widen who gets access to technology.</p>
+      <h2>Everything I've built.</h2>
+      <p>Each project below lists the languages and frameworks it was actually written in. Private repositories are published as live demos so the work can be opened by anyone.</p>
     </div>
 
     <div class="grid">
       <a class="card feature reveal" href="https://minoritiesinstem.org" target="_blank" rel="noopener">
         <div>
-          <span class="k">Founder · Organization</span>
-          <h3 class="serif">Minorities in STEM</h3>
-          <p>Founded in 2024 at Woodward Academy to bridge the gap between minorities and STEM — building access, community, and opportunity for underrepresented students across 20+ chapters worldwide.</p>
-          <span class="go">Visit minoritiesinstem.org <span class="ar">→</span></span>
+          <span class="k">Founder &middot; Organization</span>
+          <h4 class="serif">Minorities in STEM</h4>
+          <p>Founded in 2024 at Woodward Academy to bridge the gap between minorities and STEM, building access, community, and opportunity for underrepresented students across 20+ chapters worldwide. I designed and shipped the organization's site and its full digital presence.</p>
+          <div class="stack"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Vercel</span></div>
+          <span class="go">Visit minoritiesinstem.org <span class="ar">&rarr;</span></span>
         </div>
         <div class="fside">
           <div class="big">80k+</div>
           <div class="cap">people reached in ~2 years</div>
-          <div class="row"><span>300+ volunteers</span><span>20+ chapters</span><span>Founded at Woodward Academy · 2024</span></div>
+          <div class="row"><span>300+ volunteers</span><span>20+ chapters</span><span>Founded at Woodward Academy, 2024</span></div>
         </div>
       </a>
+    </div>
 
-      <a class="card wide reveal" href="https://v0-whogetstobuild.vercel.app/" target="_blank" rel="noopener">
-        <span class="flag">Live</span>
-        <span class="k">Access · Product</span>
-        <h3>Who Gets to Build?</h3>
-        <p>A project broadening who gets access to building, creating, and shaping technology.</p>
-        <span class="go">Visit project <span class="ar">→</span></span>
-      </a>
+    <div class="grouphead reveal"><h3>AI products</h3><span>Tools built for people to actually use</span></div>
+    <div class="grid">
 
       <a class="card wide reveal" href="https://ai-literacy-chi.vercel.app/" target="_blank" rel="noopener">
         <span class="flag">Live</span>
-        <span class="k">Education · AI</span>
-        <h3>AI Literacy</h3>
-        <p>Resources and learning experiences that help students understand AI clearly, responsibly, and confidently.</p>
-        <span class="go">Visit project <span class="ar">→</span></span>
+        <span class="k">Education &middot; AI</span>
+        <h4>AI Literacy Academy</h4>
+        <p>A 31-lesson AI curriculum across beginner, intermediate, and expert tracks, plus an AI encyclopedia. The OpenAI calls run through a server-side Supabase edge function so no key ever reaches the browser.</p>
+        <div class="stack"><span>React</span><span>Vite</span><span>JavaScript</span><span>Supabase Edge Functions</span><span>OpenAI API</span></div>
+        <span class="go">Open the academy <span class="ar">&rarr;</span></span>
       </a>
 
-      <a class="card reveal" href="https://ste-mbud.vercel.app/" target="_blank" rel="noopener">
+      <a class="card wide reveal" href="https://ste-mbud.vercel.app/" target="_blank" rel="noopener">
         <span class="flag">Live</span>
-        <span class="k">AI · EdTech</span>
-        <h3>STEMbud</h3>
-        <p>An AI STEM study partner that explains concepts, generates quizzes, and tracks learning progress.</p>
-        <span class="go">Visit project <span class="ar">→</span></span>
+        <span class="k">AI &middot; EdTech</span>
+        <h4>STEMbud</h4>
+        <p>An AI STEM study partner that explains concepts, generates quizzes, and tracks progress. React front end, Express API layer, Supabase auth and storage, OpenAI for the tutoring itself.</p>
+        <div class="stack"><span>TypeScript</span><span>React</span><span>Vite</span><span>Express</span><span>Supabase</span><span>OpenAI API</span></div>
+        <span class="go">Try STEMbud <span class="ar">&rarr;</span></span>
       </a>
 
-      <a class="card reveal" href="https://upgive.org" target="_blank" rel="noopener">
-        <span class="k">Nonprofit · Web</span>
-        <h3>UpGive</h3>
-        <p>A platform connecting generosity with impact — making it easier to give back to the community.</p>
-        <span class="go">upgive.org <span class="ar">→</span></span>
-      </a>
-
-      <a class="card reveal" href="https://nitjam.org" target="_blank" rel="noopener">
-        <span class="k">Community · Web</span>
-        <h3>NITJAM</h3>
-        <p>A community-driven initiative bringing people together around building and collaboration.</p>
-        <span class="go">nitjam.org <span class="ar">→</span></span>
-      </a>
-
-      <a class="card reveal" href="https://github.com/Rhythmofthebeat/Crypto" target="_blank" rel="noopener">
-        <span class="k">Blockchain · Solidity</span>
-        <h3>ERC-20 Token</h3>
-        <p>Designed and deployed a smart contract for an ERC-20 token on Ethereum.</p>
-        <span class="go">View on GitHub <span class="ar">→</span></span>
+      <a class="card reveal" href="https://imagegenerator-chi.vercel.app/" target="_blank" rel="noopener">
+        <span class="flag">Live</span>
+        <span class="k">AI &middot; Generative</span>
+        <h4>RHYMGEN Image Generator</h4>
+        <p>My very first build. A prompt-to-image tool running Stable Diffusion 3 Medium, with controls for batch size and aspect ratio.</p>
+        <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Stable Diffusion 3</span></div>
+        <span class="go">Generate an image <span class="ar">&rarr;</span></span>
       </a>
 
       <a class="card reveal" href="https://github.com/Rhythmofthebeat/Chatbot" target="_blank" rel="noopener">
-        <span class="k">AI · TypeScript</span>
-        <h3>ChatNova</h3>
-        <p>A conversational AI assistant built in TypeScript — one of my first two projects.</p>
-        <span class="go">View on GitHub <span class="ar">→</span></span>
+        <span class="k">AI &middot; Conversational</span>
+        <h4>ChatNova</h4>
+        <p>My second build and first full-stack app. A conversational AI assistant with accounts, saved chat history, and a Material UI interface on a Node and MongoDB back end.</p>
+        <div class="stack"><span>TypeScript</span><span>React</span><span>Vite</span><span>Material UI</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>OpenAI API</span></div>
+        <span class="go">View the source <span class="ar">&rarr;</span></span>
       </a>
 
-      <a class="card reveal" href="https://github.com/Rhythmofthebeat/ImageGenerator" target="_blank" rel="noopener">
-        <span class="k">AI · Generative</span>
-        <h3>Image Generator</h3>
-        <p>A generative image tool turning prompts into visuals — my very first build.</p>
-        <span class="go">View on GitHub <span class="ar">→</span></span>
+      <a class="card reveal" href="https://v0-whogetstobuild.vercel.app/" target="_blank" rel="noopener">
+        <span class="flag">Live</span>
+        <span class="k">Access &middot; Product</span>
+        <h4>Who Gets to Build?</h4>
+        <p>A project broadening who gets access to building, creating, and shaping technology.</p>
+        <div class="stack"><span>Next.js</span><span>React</span><span>Tailwind CSS</span></div>
+        <span class="go">Visit project <span class="ar">&rarr;</span></span>
+      </a>
+
+      <div class="card reveal">
+        <span class="flag priv">Private &middot; enterprise</span>
+        <span class="k">AI &middot; Hiring</span>
+        <h4>Avants AI</h4>
+        <p>My first project built for a community rather than for myself. A free resume analyzer and matcher with resume scoring, AI interviews, and a micro-task marketplace, deployed through KR3 Information Systems for enterprise clients. 1,000+ users.</p>
+        <div class="stack"><span>Python</span><span>Flask</span><span>JavaScript</span><span>LLM scoring</span></div>
+      </div>
+
+    </div>
+
+    <div class="grouphead reveal"><h3>Platforms and community</h3><span>Bigger systems, real users</span></div>
+    <div class="grid">
+
+      <a class="card wide reveal" href="https://nitjam.com" target="_blank" rel="noopener">
+        <span class="flag">Live</span>
+        <span class="k">Community &middot; Careers</span>
+        <h4>NITJAM Alumni Career Portal</h4>
+        <p>A career and networking portal for 15,000+ NIT Jamshedpur alumni across North America, with a job board, member sign in, mentorship, and events. Built with two interns on my team.</p>
+        <div class="stack"><span>Next.js</span><span>React</span><span>TypeScript</span><span>HTML</span><span>CSS</span></div>
+        <span class="go">Visit nitjam.com <span class="ar">&rarr;</span></span>
+      </a>
+
+      <a class="card wide reveal" href="https://upgive.org" target="_blank" rel="noopener">
+        <span class="flag">Live</span>
+        <span class="k">Nonprofit &middot; Marketplace</span>
+        <h4>UpGive</h4>
+        <p>A marketplace that routes surplus corporate goods to nonprofits, built as a full production app on a real Supabase backend with listings, claims, and shipping and fulfillment logic.</p>
+        <div class="stack"><span>React</span><span>Vite</span><span>JavaScript</span><span>Supabase</span></div>
+        <span class="go">Visit upgive.org <span class="ar">&rarr;</span></span>
+      </a>
+
+      <a class="card wide reveal" href="https://kr-3-asset-tracker-demo.vercel.app/" target="_blank" rel="noopener">
+        <span class="flag">Live demo</span>
+        <span class="k">Enterprise &middot; Internal tools</span>
+        <h4>KR3 Asset Tracker</h4>
+        <p>An IT asset management platform I built as AI and Intern Department Head at KR3, tracking laptops, monitors, phones, and tablets through assigned, available, in repair, and retired states. The private production app is opened here as a public demo with sample data, no account needed.</p>
+        <div class="stack"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Supabase</span><span>Vercel</span></div>
+        <span class="go">Open the public demo <span class="ar">&rarr;</span></span>
+      </a>
+
+      <div class="card wide reveal">
+        <span class="flag priv">Private &middot; internal</span>
+        <span class="k">Security &middot; Platform</span>
+        <h4>KR3 Cyber Defense Command</h4>
+        <p>A cyber defense command platform for KR3, built as a containerized Node service with an operations dashboard over live security signals. It runs on internal infrastructure rather than as a public demo.</p>
+        <div class="stack"><span>JavaScript</span><span>Node.js</span><span>Express</span><span>Docker</span></div>
+      </div>
+
+      <div class="card wide reveal">
+        <span class="flag priv">In development</span>
+        <span class="k">Climate &middot; Microsoft x IISD</span>
+        <h4>i-Pledge Carbon Impact Platform</h4>
+        <p>A carbon impact tracking platform I build and manage as the technical developer, co-developed with Microsoft's CELA team and IISD. Slated to be presented at the Global Sustainability Summit 2026 in New Delhi.</p>
+        <div class="stack"><span>JavaScript</span><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>
+      </div>
+
+    </div>
+
+    <div class="grouphead reveal"><h3>Where I learned to code</h3><span>9th grade onward, still public</span></div>
+    <div class="grid">
+
+      <a class="card reveal" href="https://github.com/Rhythmofthebeat/Chess" target="_blank" rel="noopener">
+        <span class="k">Game AI &middot; Python</span>
+        <h4>Chess Engine</h4>
+        <p>A playable chess program with its own search and evaluation logic, a pygame interface, and legal move handling. The first real program I wrote, in 9th grade.</p>
+        <div class="stack"><span>Python</span><span>pygame</span><span>python-chess</span><span>Search algorithms</span></div>
+        <span class="go">View the source <span class="ar">&rarr;</span></span>
       </a>
 
       <a class="card reveal" href="https://github.com/Rhythmofthebeat/Machine-Learning" target="_blank" rel="noopener">
-        <span class="k">ML · Python</span>
-        <h3>Machine Learning</h3>
-        <p>Experiments and models exploring core machine-learning techniques in Python.</p>
-        <span class="go">View on GitHub <span class="ar">→</span></span>
+        <span class="k">ML &middot; Python</span>
+        <h4>Machine Learning Notebooks</h4>
+        <p>Logistic regression, a neural network for autonomous driving decisions, a convolutional network for image classification, and NLP models applied to financial text. Also 9th grade.</p>
+        <div class="stack"><span>Python</span><span>Jupyter</span><span>NumPy</span><span>Neural networks</span><span>CNNs</span><span>NLP</span></div>
+        <span class="go">View the notebooks <span class="ar">&rarr;</span></span>
       </a>
+
+      <a class="card reveal" href="https://github.com/Rhythmofthebeat/Crypto" target="_blank" rel="noopener">
+        <span class="k">Blockchain &middot; Solidity</span>
+        <h4>TurtleToken, an ERC-20</h4>
+        <p>Designed and deployed a working ERC-20 token contract on Ethereum, with a Hardhat setup for compiling, testing, and deploying it.</p>
+        <div class="stack"><span>Solidity</span><span>Hardhat</span><span>JavaScript</span><span>Ethereum</span></div>
+        <span class="go">View the contract <span class="ar">&rarr;</span></span>
+      </a>
+
+      <a class="card reveal" href="https://github.com/Rhythmofthebeat/Excel" target="_blank" rel="noopener">
+        <span class="k">Automation &middot; Python</span>
+        <h4>Spreadsheet Automation</h4>
+        <p>Python scripts that read transaction workbooks, compute summaries, and write formatted bar charts back into Excel automatically.</p>
+        <div class="stack"><span>Python</span><span>openpyxl</span><span>Excel</span></div>
+        <span class="go">View the source <span class="ar">&rarr;</span></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="wrap">
+    <div class="sec-top reveal">
+      <div class="label">The stack</div>
+      <h2>What I build with.</h2>
+      <p>Picked up across the projects above, roughly in the order I learned them.</p>
+    </div>
+    <div class="toolbelt reveal">
+      <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Solidity</span><span>HTML</span><span>CSS</span><span>SQL</span>
+      <span>React</span><span>Next.js</span><span>Vite</span><span>Node.js</span><span>Express</span><span>Flask</span><span>Material UI</span><span>Tailwind CSS</span>
+      <span>Supabase</span><span>PostgreSQL</span><span>MongoDB</span><span>OpenAI API</span><span>Stable Diffusion</span><span>Jupyter</span><span>pygame</span><span>openpyxl</span>
+      <span>Hardhat</span><span>Docker</span><span>Git</span><span>GitHub</span><span>Vercel</span>
     </div>
   </div>
 </section>
@@ -253,31 +358,57 @@
 <section id="journey">
   <div class="wrap">
     <div class="sec-top reveal">
-      <div class="label">The story</div>
+      <div class="label">The timeline</div>
       <h2>How it all spiraled.</h2>
-      <p>From a couple of first builds to a movement — and back into building AI for the community.</p>
+      <p>From a chess program in 9th grade to AI platforms with real users, in the order it actually happened.</p>
     </div>
     <div class="timeline reveal">
+
       <div class="tl">
-        <div class="ph"><div class="step">Phase 01</div><div class="yr">The start</div></div>
-        <div><h4>Image Generator &amp; ChatNova</h4><p>My first two builds — a generative image tool and an AI chat assistant, ChatNova. This is where I fell for building things from scratch.</p></div>
+        <div class="ph"><div class="step">Phase 01</div><div class="yr">9th grade</div></div>
+        <div>
+          <h4>Chess and machine learning</h4>
+          <p>Where the coding started. I wrote a chess engine in Python with its own move search, then went straight into machine learning notebooks: logistic regression, neural networks, a CNN, and NLP on financial text. Nothing here was for anyone else yet. It was just learning how the machine thinks.</p>
+          <div class="stack"><span>Python</span><span>pygame</span><span>Jupyter</span><span>Neural networks</span></div>
+        </div>
       </div>
+
       <div class="tl">
-        <div class="ph"><div class="step">Phase 02</div><div class="yr">First community project</div></div>
-        <div><h4>Avants AI</h4><p>Avants AI was my first project built for a community, not just for myself — the moment building became about people and impact.</p></div>
+        <div class="ph"><div class="step">Phase 02</div><div class="yr">First real builds</div></div>
+        <div>
+          <h4>Image Generator, then ChatNova</h4>
+          <p>My first two products. RHYMGEN turned prompts into images with Stable Diffusion, and ChatNova was a full-stack conversational assistant with accounts, saved history, and its own API. This is where I fell for shipping things from scratch instead of just running notebooks.</p>
+          <div class="stack"><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Node.js</span><span>MongoDB</span><span>OpenAI API</span></div>
+        </div>
       </div>
+
       <div class="tl">
-        <div class="ph"><div class="step">Phase 03</div><div class="yr">CS spirals out</div></div>
-        <div><h4>Machine learning, crypto &amp; the web</h4><p>From there, computer-science projects spiraled — machine learning, an ERC-20 smart contract, web platforms, and AI-education tools.</p></div>
+        <div class="ph"><div class="step">Phase 03</div><div class="yr">Building for people</div></div>
+        <div>
+          <h4>Avants AI, and Minorities in STEM</h4>
+          <p>Avants AI was the turn. A free resume analyzer and matcher, it was the first thing I built for a community instead of for myself, and it now serves 1,000+ users through KR3. It ran alongside founding Minorities in STEM, and the two reframed everything: code as access, not as a hobby.</p>
+          <div class="stack"><span>Python</span><span>Flask</span><span>Next.js</span><span>React</span></div>
+        </div>
       </div>
+
       <div class="tl">
-        <div class="ph"><div class="step">Phase 04</div><div class="yr">A movement</div></div>
-        <div><h4>Minorities in STEM</h4><p>It all converged into Minorities in STEM — turning personal building into access, community, and opportunity for thousands of students.</p></div>
+        <div class="ph"><div class="step">Phase 04</div><div class="yr">The AI projects spiral</div></div>
+        <div>
+          <h4>AI Literacy, STEMbud, Asset Tracker, Cyber Defense</h4>
+          <p>From there it kept multiplying. The AI Literacy Academy and STEMbud brought AI education to students directly, while at KR3 I shipped the Asset Tracker and a cyber defense command platform as an intern department head. Same tools, much bigger stakes.</p>
+          <div class="stack"><span>React</span><span>Vite</span><span>Express</span><span>Supabase</span><span>OpenAI API</span><span>Docker</span></div>
+        </div>
       </div>
+
       <div class="tl">
-        <div class="ph"><div class="step">Phase 05</div><div class="yr">AI, for community</div></div>
-        <div><h4>The AI projects spiral again</h4><p>After Minorities in STEM, the AI community projects spiraled out again — STEMbud, AI Literacy, Who Gets to Build?, UpGive, and NITJAM — this time building AI tools squarely for people and impact.</p></div>
+        <div class="ph"><div class="step">Phase 05</div><div class="yr">Now</div></div>
+        <div>
+          <h4>Platforms at scale</h4>
+          <p>The current work is infrastructure other people depend on: UpGive moving surplus corporate goods to nonprofits, the NITJAM portal serving 15,000+ alumni, Who Gets to Build?, and the i-Pledge Carbon Impact Platform with Microsoft's CELA team and IISD.</p>
+          <div class="stack"><span>Next.js</span><span>React</span><span>Supabase</span><span>PostgreSQL</span><span>Vercel</span></div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -305,7 +436,7 @@
       <div class="rec">
         <div class="badge">C</div>
         <div class="st">Ongoing</div>
-        <h4>Conferences &amp; Convenings</h4>
+        <h4>Conferences and convenings</h4>
         <p>Invited to and attended national and international conferences on STEM access, education, and inclusion.</p>
       </div>
     </div>
@@ -326,10 +457,11 @@
 
 <div class="wrap">
   <footer>
-    <div class="m">© 2026 Rhythm</div>
+    <div class="m">&copy; 2026 Rhythm</div>
     <div class="fnav">
       <a href="#work">Work</a>
-      <a href="#journey">Story</a>
+      <a href="#stack">Stack</a>
+      <a href="#journey">Timeline</a>
       <a href="#recognition">Recognition</a>
       <a href="https://minoritiesinstem.org" target="_blank" rel="noopener">Minorities in STEM</a>
     </div>
