@@ -107,7 +107,7 @@
   .toolbelt{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
   .toolbelt span{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;color:#3d424e;background:#fff;border:1px solid var(--line);border-radius:7px;padding:7px 12px}
 
-  .recs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .recs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
   .rec{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;transition:transform .18s,box-shadow .18s}
   .rec:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(23,30,60,.08)}
   .rec .badge{width:44px;height:44px;border-radius:11px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:600;font-size:20px;color:var(--accent)}
@@ -115,6 +115,13 @@
   .rec h4{font-family:"Fraunces",serif;font-weight:600;font-size:21px;margin-top:4px}
   .rec p{color:var(--muted);font-size:13.5px;margin-top:8px}
   @media(max-width:760px){.recs{grid-template-columns:1fr}}
+  .press{margin-top:44px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px}
+  .press .ph2{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .press h3{font-family:"Fraunces",serif;font-weight:600;font-size:22px;letter-spacing:-.01em}
+  .press .sub2{color:var(--muted);font-size:14px;margin-top:8px;max-width:70ch}
+  .outlets{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+  .outlets span{font-size:12.5px;font-weight:600;color:#3d424e;background:#f3f2ee;border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+  .press .plink{font-size:13px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px;margin-top:18px}
 
   .end{padding:96px 0;text-align:center;border-top:1px solid var(--line)}
   .end h2{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(34px,6vw,64px);letter-spacing:-.025em;line-height:1.02}
@@ -163,8 +170,8 @@
 
 <div class="wrap">
   <div class="stats reveal">
-    <div class="stat"><div class="n"><b>80k</b>+</div><div class="l">People reached</div></div>
-    <div class="stat"><div class="n"><b>20</b>+</div><div class="l">Chapters</div></div>
+    <div class="stat"><div class="n"><b>300k</b>+</div><div class="l">Students reached</div></div>
+    <div class="stat"><div class="n"><b>40</b>+</div><div class="l">Chapters</div></div>
     <div class="stat"><div class="n"><b>300</b>+</div><div class="l">Volunteers</div></div>
     <div class="stat"><div class="n"><b>17</b>+</div><div class="l">Projects shipped</div></div>
   </div>
@@ -183,14 +190,14 @@
         <div>
           <span class="k">Founder &middot; Organization</span>
           <h4 class="serif">Minorities in STEM</h4>
-          <p>Founded in 2024 at Woodward Academy to bridge the gap between minorities and STEM, building access, community, and opportunity for underrepresented students across 20+ chapters worldwide. I designed and shipped the organization's site and its full digital presence.</p>
+          <p>Founded in 2024 at Woodward Academy to bridge the gap between minorities and STEM, building access, community, and opportunity for underrepresented students across 40+ chapters worldwide. I designed and shipped the organization's site and its full digital presence.</p>
           <div class="stack"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Vercel</span></div>
           <span class="go">Visit minoritiesinstem.org <span class="ar">&rarr;</span></span>
         </div>
         <div class="fside">
-          <div class="big">80k+</div>
-          <div class="cap">people reached in ~2 years</div>
-          <div class="row"><span>300+ volunteers</span><span>20+ chapters</span><span>Founded at Woodward Academy, 2024</span></div>
+          <div class="big">300k+</div>
+          <div class="cap">students reached in ~2 years</div>
+          <div class="row"><span>300+ volunteers</span><span>40+ chapters</span><span>Founded at Woodward Academy, 2024</span></div>
         </div>
       </a>
     </div>
@@ -220,15 +227,16 @@
         <span class="flag">Live</span>
         <span class="k">AI &middot; Generative</span>
         <h4>RHYMGEN Image Generator</h4>
-        <p>My very first build. A prompt-to-image tool running Stable Diffusion 3 Medium, with controls for batch size and aspect ratio.</p>
+        <p>One of my first AI projects, where I learned to code with AI. A prompt-to-image tool running Stable Diffusion 3 Medium, with controls for batch size and aspect ratio.</p>
         <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Stable Diffusion 3</span></div>
         <span class="go">Generate an image <span class="ar">&rarr;</span></span>
       </a>
 
-      <a class="card reveal" href="https://github.com/Rhythmofthebeat/Chatbot" target="_blank" rel="noopener">
+      <a class="card reveal" href="https://chatbot-58f8.vercel.app/" target="_blank" rel="noopener">
+        <span class="flag">Live demo</span>
         <span class="k">AI &middot; Conversational</span>
         <h4>ChatNova</h4>
-        <p>My second build and first full-stack app. A conversational AI assistant with accounts, saved chat history, and a Material UI interface on a Node and MongoDB back end.</p>
+        <p>With RHYMGEN, one of my first AI projects and my first full-stack app. A conversational AI assistant with accounts, saved chat history, and a Material UI interface on a Node and MongoDB back end.</p>
         <div class="stack"><span>TypeScript</span><span>React</span><span>Vite</span><span>Material UI</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>OpenAI API</span></div>
         <span class="go">View the source <span class="ar">&rarr;</span></span>
       </a>
@@ -282,13 +290,23 @@
         <span class="go">Open the public demo <span class="ar">&rarr;</span></span>
       </a>
 
-      <div class="card wide reveal">
-        <span class="flag priv">Private &middot; internal</span>
+      <a class="card wide reveal" href="https://cyber-defense-ten.vercel.app/" target="_blank" rel="noopener">
+        <span class="flag">Live demo</span>
         <span class="k">Security &middot; Platform</span>
         <h4>KR3 Cyber Defense Command</h4>
-        <p>A cyber defense command platform for KR3, built as a containerized Node service with an operations dashboard over live security signals. It runs on internal infrastructure rather than as a public demo.</p>
-        <div class="stack"><span>JavaScript</span><span>Node.js</span><span>Express</span><span>Docker</span></div>
-      </div>
+        <p>A cyber defense command platform for KR3: a React operations dashboard over a containerized Node service watching live security signals. The private production system runs on internal infrastructure; this demo opens the command interface.</p>
+        <div class="stack"><span>JavaScript</span><span>React</span><span>Vite</span><span>Node.js</span><span>Docker</span></div>
+        <span class="go">Open the demo <span class="ar">&rarr;</span></span>
+      </a>
+
+      <a class="card wide reveal" href="https://laptop-tracker-jade.vercel.app/" target="_blank" rel="noopener">
+        <span class="flag">Live demo</span>
+        <span class="k">Enterprise &middot; Internal tools</span>
+        <h4>KR3 Laptop Tracker</h4>
+        <p>The laptop and device tracking system behind the Asset Tracker: company workspaces, employee assignment, and full device lifecycle from purchase to retirement. Deployed from the private repo as a live demo.</p>
+        <div class="stack"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Supabase</span></div>
+        <span class="go">Open the demo <span class="ar">&rarr;</span></span>
+      </a>
 
       <div class="card wide reveal">
         <span class="flag priv">In development</span>
@@ -376,8 +394,8 @@
       <div class="tl">
         <div class="ph"><div class="step">Phase 02</div><div class="yr">First real builds</div></div>
         <div>
-          <h4>Image Generator, then ChatNova</h4>
-          <p>My first two products. RHYMGEN turned prompts into images with Stable Diffusion, and ChatNova was a full-stack conversational assistant with accounts, saved history, and its own API. This is where I fell for shipping things from scratch instead of just running notebooks.</p>
+          <h4>RHYMGEN and ChatNova, my first AI projects</h4>
+          <p>My first AI projects, and where I learned to code with AI. RHYMGEN turned prompts into images with Stable Diffusion, and ChatNova was a full-stack conversational assistant with accounts, saved history, and its own API. This is where I fell for shipping things from scratch instead of just running notebooks.</p>
           <div class="stack"><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Node.js</span><span>MongoDB</span><span>OpenAI API</span></div>
         </div>
       </div>
@@ -394,8 +412,8 @@
       <div class="tl">
         <div class="ph"><div class="step">Phase 04</div><div class="yr">The AI projects spiral</div></div>
         <div>
-          <h4>AI Literacy, STEMbud, Asset Tracker, Cyber Defense</h4>
-          <p>From there it kept multiplying. The AI Literacy Academy and STEMbud brought AI education to students directly, while at KR3 I shipped the Asset Tracker and a cyber defense command platform as an intern department head. Same tools, much bigger stakes.</p>
+          <h4>AI Literacy, STEMbud, Laptop Tracker, Cyber Defense</h4>
+          <p>From there it kept multiplying. The AI Literacy Academy and STEMbud brought AI education to students directly, while at KR3 I shipped the Laptop Tracker, the Asset Tracker, and a cyber defense command platform as an intern department head. Same tools, much bigger stakes.</p>
           <div class="stack"><span>React</span><span>Vite</span><span>Express</span><span>Supabase</span><span>OpenAI API</span><span>Docker</span></div>
         </div>
       </div>
@@ -434,12 +452,37 @@
         <p>Selected for an Aspen Institute program recognizing emerging leaders and changemakers.</p>
       </div>
       <div class="rec">
+        <div class="badge">CR</div>
+        <div class="st">Recognized &middot; June 2026</div>
+        <h4>U.S. Congressional Record</h4>
+        <p>Minorities in STEM entered into the Congressional Record, recognizing the network's work expanding STEM access.</p>
+      </div>
+      <div class="rec">
         <div class="badge">C</div>
         <div class="st">Ongoing</div>
         <h4>Conferences and convenings</h4>
         <p>Invited to and attended national and international conferences on STEM access, education, and inclusion.</p>
       </div>
     </div>
+
+    <a class="press reveal" href="https://minoritiesinstem.org/press" target="_blank" rel="noopener" style="display:block">
+      <div class="ph2">
+        <h3>In the news</h3>
+        <span class="label">Press &middot; MIS network</span>
+      </div>
+      <p class="sub2">Minorities in STEM has been profiled by Channel Kindness and Innovation Insider, and the network's work appears in coverage across national and international outlets.</p>
+      <div class="outlets">
+        <span>Channel Kindness</span>
+        <span>Innovation Insider</span>
+        <span>CBC News</span>
+        <span>Radio-Canada</span>
+        <span>Street Voices</span>
+        <span>Sudbury Star</span>
+        <span>CanadianSME Magazine</span>
+        <span>U.S. National Innovator Challenge</span>
+      </div>
+      <span class="plink">See all coverage at minoritiesinstem.org/press <span class="ar">&rarr;</span></span>
+    </a>
   </div>
 </section>
 
