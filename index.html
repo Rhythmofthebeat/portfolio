@@ -84,6 +84,11 @@
   .card .go .ar{transition:transform .18s}
   .stack{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
   .stack span{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:10.5px;font-weight:500;letter-spacing:.02em;color:#4a5163;background:#f3f2ee;border:1px solid var(--line);border-radius:5px;padding:3px 7px}
+  .ps{margin:10px 0 2px;display:flex;flex-direction:column;gap:6px}
+  .ps-line{font-size:13.5px;color:var(--muted);line-height:1.5}
+  .ps-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-right:7px}
+  .ps-tag.sol{color:#1f8f57}
+  .card.feature .ps-line{font-size:14.5px}
   .flag{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#1f8f57;margin-bottom:6px}
   .flag::before{content:"";width:7px;height:7px;border-radius:50%;background:#25b56b}
   .flag.priv{color:var(--faint)}
@@ -94,6 +99,13 @@
   .fside .row{margin-top:16px;display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink)}
   @media(max-width:860px){.card,.card.wide{grid-column:span 6}.card.feature{grid-template-columns:1fr}.fside{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:22px}}
   @media(max-width:560px){.card,.card.wide,.card.feature{grid-column:span 12}}
+
+  .about{display:grid;grid-template-columns:172px 1fr;gap:32px;align-items:center;margin-top:44px}
+  .about .portrait{width:172px;height:172px;border-radius:16px;background:var(--accent-soft);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:600;font-size:54px;color:var(--accent);overflow:hidden}
+  .about .portrait img{width:100%;height:100%;object-fit:cover;border-radius:15px}
+  .about p{color:var(--muted);font-size:14.5px;max-width:60ch}
+  .about .note{margin-top:10px;font-size:12px;color:var(--faint)}
+  @media(max-width:680px){.about{grid-template-columns:1fr;text-align:left}.about .portrait{width:120px;height:120px;font-size:38px}}
 
   .timeline{border-top:1px solid var(--line)}
   .tl{display:grid;grid-template-columns:200px 1fr;gap:30px;padding:30px 0;border-bottom:1px solid var(--line)}
@@ -115,12 +127,22 @@
   .rec h4{font-family:"Fraunces",serif;font-weight:600;font-size:21px;margin-top:4px}
   .rec p{color:var(--muted);font-size:13.5px;margin-top:8px}
   @media(max-width:760px){.recs{grid-template-columns:1fr}}
+  .talklist{border-top:1px solid var(--line);margin-top:12px}
+  .talk{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:22px 0;border-bottom:1px solid var(--line)}
+  .talk .tw{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+  .talk .tw.done{color:#1f8f57}
+  .talk h4{font-family:"Fraunces",serif;font-weight:600;font-size:18px;letter-spacing:-.01em}
+  .talk p{color:var(--muted);font-size:14px;margin-top:5px;max-width:64ch}
+  .talk .lnk{display:inline-flex;margin-top:8px;font-size:12.5px;font-weight:600;color:var(--accent);align-items:center;gap:6px}
+  @media(max-width:560px){.talk{grid-template-columns:1fr;gap:6px}}
   .press{margin-top:44px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px}
   .press .ph2{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px}
   .press h3{font-family:"Fraunces",serif;font-weight:600;font-size:22px;letter-spacing:-.01em}
   .press .sub2{color:var(--muted);font-size:14px;margin-top:8px;max-width:70ch}
   .outlets{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
-  .outlets span{font-size:12.5px;font-weight:600;color:#3d424e;background:#f3f2ee;border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+  .outlets span,.outlets a{font-size:12.5px;font-weight:600;color:#3d424e;background:#f3f2ee;border:1px solid var(--line);border-radius:999px;padding:6px 14px;display:inline-block}
+  .outlets a{color:var(--accent);transition:border-color .2s}
+  .outlets a:hover{border-color:var(--accent)}
   .press .plink{font-size:13px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px;margin-top:18px}
 
   .end{padding:96px 0;text-align:center;border-top:1px solid var(--line)}
@@ -175,6 +197,13 @@
     <div class="stat"><div class="n"><b>300</b>+</div><div class="l">Volunteers</div></div>
     <div class="stat"><div class="n"><b>17</b>+</div><div class="l">Projects shipped</div></div>
   </div>
+  <div class="about reveal">
+    <div class="portrait"><!-- Swap for a real headshot: <img src="/headshot.jpg" alt="Rhythm"> -->R</div>
+    <div>
+      <p>I build things that widen who gets to participate in STEM and technology, from AI education tools to platforms with thousands of real users. Every project below started because something was broken or missing, and I built it rather than wait for someone else to.</p>
+      <div class="note">Photo placeholder. Drop a headshot and presentation photos in here once you send them over.</div>
+    </div>
+  </div>
 </div>
 
 <section id="work">
@@ -190,7 +219,10 @@
         <div>
           <span class="k">Founder &middot; Organization</span>
           <h4 class="serif">Minorities in STEM</h4>
-          <p>Founded in 2024 at Woodward Academy to bridge the gap between minorities and STEM, building access, community, and opportunity for underrepresented students across 40+ chapters worldwide. I designed and shipped the organization's site and its full digital presence.</p>
+          <div class="ps">
+            <div class="ps-line"><span class="ps-tag">Problem</span>I felt shut out of my own robotics team when the program was threatened with cuts, and I saw the same gap everywhere: talented students with no path into STEM, and the few programs that did exist getting cut first.</div>
+            <div class="ps-line"><span class="ps-tag sol">Solution</span>A free, youth-led nonprofit network I founded in 2024 at Woodward Academy, now 40+ chapters and 300+ volunteers across 50+ countries. I designed and built the organization's site and its full digital presence.</div>
+          </div>
           <div class="stack"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Vercel</span></div>
           <span class="go">Visit minoritiesinstem.org <span class="ar">&rarr;</span></span>
         </div>
@@ -209,7 +241,10 @@
         <span class="flag">Live</span>
         <span class="k">Education &middot; AI</span>
         <h4>AI Literacy Academy</h4>
-        <p>A 31-lesson AI curriculum across beginner, intermediate, and expert tracks, plus an AI encyclopedia. The OpenAI calls run through a server-side Supabase edge function so no key ever reaches the browser.</p>
+        <div class="ps">
+          <div class="ps-line"><span class="ps-tag">Problem</span>Students get access to AI tools long before they get access to AI education, so most use AI without understanding how it actually works.</div>
+          <div class="ps-line"><span class="ps-tag sol">Solution</span>A free 31-lesson curriculum across beginner, intermediate, and expert tracks, plus an AI encyclopedia. OpenAI calls run through a server-side Supabase edge function so no key ever reaches the browser.</div>
+        </div>
         <div class="stack"><span>React</span><span>Vite</span><span>JavaScript</span><span>Supabase Edge Functions</span><span>OpenAI API</span></div>
         <span class="go">Open the academy <span class="ar">&rarr;</span></span>
       </a>
@@ -218,7 +253,10 @@
         <span class="flag">Live</span>
         <span class="k">AI &middot; EdTech</span>
         <h4>STEMbud</h4>
-        <p>An AI STEM study partner that explains concepts, generates quizzes, and tracks progress. React front end, Express API layer, Supabase auth and storage, OpenAI for the tutoring itself.</p>
+        <div class="ps">
+          <div class="ps-line"><span class="ps-tag">Problem</span>Students working through STEM subjects often can't get one-on-one help outside class hours.</div>
+          <div class="ps-line"><span class="ps-tag sol">Solution</span>An AI study partner that explains concepts, generates quizzes on demand, and tracks progress. React front end, Express API layer, Supabase auth and storage, OpenAI for the tutoring itself.</div>
+        </div>
         <div class="stack"><span>TypeScript</span><span>React</span><span>Vite</span><span>Express</span><span>Supabase</span><span>OpenAI API</span></div>
         <span class="go">Try STEMbud <span class="ar">&rarr;</span></span>
       </a>
@@ -227,7 +265,10 @@
         <span class="flag">Live</span>
         <span class="k">AI &middot; Generative</span>
         <h4>RHYMGEN Image Generator</h4>
-        <p>One of my first AI projects, where I learned to code with AI. A prompt-to-image tool running Stable Diffusion 3 Medium, with controls for batch size and aspect ratio.</p>
+        <div class="ps">
+          <div class="ps-line"><span class="ps-tag">Problem</span>Turning a text description into an image meant running a whole diffusion pipeline yourself.</div>
+          <div class="ps-line"><span class="ps-tag sol">Solution</span>A prompt-to-image tool running Stable Diffusion 3 Medium, with controls for batch size and aspect ratio. One of my first AI projects, where I learned to code with AI.</div>
+        </div>
         <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Stable Diffusion 3</span></div>
         <span class="go">Generate an image <span class="ar">&rarr;</span></span>
       </a>
@@ -236,7 +277,10 @@
         <span class="flag">Live demo</span>
         <span class="k">AI &middot; Conversational</span>
         <h4>ChatNova</h4>
-        <p>With RHYMGEN, one of my first AI projects and my first full-stack app. A conversational AI assistant with accounts, saved chat history, and a Material UI interface on a Node and MongoDB back end.</p>
+        <div class="ps">
+          <div class="ps-line"><span class="ps-tag">Problem</span>Most of my early AI experiments were one-off scripts with nothing that remembered a conversation or a user.</div>
+          <div class="ps-line"><span class="ps-tag sol">Solution</span>A conversational AI assistant with accounts, saved chat history, and a Material UI interface on a Node and MongoDB back end. My first full-stack app.</div>
+        </div>
         <div class="stack"><span>TypeScript</span><span>React</span><span>Vite</span><span>Material UI</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>OpenAI API</span></div>
         <span class="go">View the source <span class="ar">&rarr;</span></span>
       </a>
@@ -245,7 +289,10 @@
         <span class="flag">Live</span>
         <span class="k">Access &middot; Product</span>
         <h4>Who Gets to Build?</h4>
-        <p>A project broadening who gets access to building, creating, and shaping technology.</p>
+        <div class="ps">
+          <div class="ps-line"><span class="ps-tag">Problem</span>Building, creating, and shaping technology is still concentrated among a narrow group of people.</div>
+          <div class="ps-line"><span class="ps-tag sol">Solution</span>A project broadening who gets access to building, creating, and shaping technology.</div>
+        </div>
         <div class="stack"><span>Next.js</span><span>React</span><span>Tailwind CSS</span></div>
         <span class="go">Visit project <span class="ar">&rarr;</span></span>
       </a>
@@ -254,7 +301,10 @@
         <span class="flag priv">Private &middot; enterprise</span>
         <span class="k">AI &middot; Hiring</span>
         <h4>Avants AI</h4>
-        <p>My first project built for a community rather than for myself. A free resume analyzer and matcher with resume scoring, AI interviews, and a micro-task marketplace, deployed through KR3 Information Systems for enterprise clients. 1,000+ users.</p>
+        <div class="ps">
+          <div class="ps-line"><span class="ps-tag">Problem</span>Resume screening is slow and opaque, and most small teams can't afford enterprise-grade hiring tools.</div>
+          <div class="ps-line"><span class="ps-tag sol">Solution</span>A free resume analyzer and matcher with resume scoring, AI interviews, and a micro-task marketplace, deployed through KR3 Information Systems for enterprise clients. 1,000+ users. My first project built for a community rather than for myself.</div>
+        </div>
         <div class="stack"><span>Python</span><span>Flask</span><span>JavaScript</span><span>LLM scoring</span></div>
       </div>
 
@@ -267,7 +317,10 @@
         <span class="flag">Live</span>
         <span class="k">Community &middot; Careers</span>
         <h4>NITJAM Alumni Career Portal</h4>
-        <p>A career and networking portal for 15,000+ NIT Jamshedpur alumni across North America, with a job board, member sign in, mentorship, and events. Built with two interns on my team.</p>
+        <div class="ps">
+          <div class="ps-line"><span class="ps-tag">Problem</span>15,000+ NIT Jamshedpur alumni across North America had no shared home for networking, mentorship, or job opportunities.</div>
+          <div class="ps-line"><span class="ps-tag sol">Solution</span>A career and networking portal with a job board, member sign in, mentorship, and events. Built with two interns on my team.</div>
+        </div>
         <div class="stack"><span>Next.js</span><span>React</span><span>TypeScript</span><span>HTML</span><span>CSS</span></div>
         <span class="go">Visit nitjam.com <span class="ar">&rarr;</span></span>
       </a>
@@ -276,7 +329,10 @@
         <span class="flag">Live</span>
         <span class="k">Nonprofit &middot; Marketplace</span>
         <h4>UpGive</h4>
-        <p>A marketplace that routes surplus corporate goods to nonprofits, built as a full production app on a real Supabase backend with listings, claims, and shipping and fulfillment logic.</p>
+        <div class="ps">
+          <div class="ps-line"><span class="ps-tag">Problem</span>Companies generate surplus goods that get discarded, while nonprofits that could use them go without.</div>
+          <div class="ps-line"><span class="ps-tag sol">Solution</span>A marketplace that routes surplus corporate goods to nonprofits, built as a full production app on a real Supabase backend with listings, claims, and shipping and fulfillment logic.</div>
+        </div>
         <div class="stack"><span>React</span><span>Vite</span><span>JavaScript</span><span>Supabase</span></div>
         <span class="go">Visit upgive.org <span class="ar">&rarr;</span></span>
       </a>
@@ -285,7 +341,10 @@
         <span class="flag">Live demo</span>
         <span class="k">Enterprise &middot; Internal tools</span>
         <h4>KR3 Asset Tracker</h4>
-        <p>An IT asset management platform I built as AI and Intern Department Head at KR3, tracking laptops, monitors, phones, and tablets through assigned, available, in repair, and retired states. The private production app is opened here as a public demo with sample data, no account needed.</p>
+        <div class="ps">
+          <div class="ps-line"><span class="ps-tag">Problem</span>KR3 had no system to track its own hardware, laptops, monitors, phones, and tablets, through its lifecycle.</div>
+          <div class="ps-line"><span class="ps-tag sol">Solution</span>An IT asset management platform I built as AI and Intern Department Head at KR3, tracking devices through assigned, available, in repair, and retired states. The private production app is opened here as a public demo with sample data, no account needed.</div>
+        </div>
         <div class="stack"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Supabase</span><span>Vercel</span></div>
         <span class="go">Open the public demo <span class="ar">&rarr;</span></span>
       </a>
@@ -294,7 +353,10 @@
         <span class="flag">Live demo</span>
         <span class="k">Security &middot; Platform</span>
         <h4>KR3 Cyber Defense Command</h4>
-        <p>A cyber defense command platform for KR3: a React operations dashboard over a containerized Node service watching live security signals. The private production system runs on internal infrastructure; this demo opens the command interface.</p>
+        <div class="ps">
+          <div class="ps-line"><span class="ps-tag">Problem</span>Security teams need a live view of what is happening across their systems, not signals scattered across separate logs.</div>
+          <div class="ps-line"><span class="ps-tag sol">Solution</span>A cyber defense command platform for KR3: a React operations dashboard over a containerized Node service watching live security signals. The private production system runs on internal infrastructure; this demo opens the command interface without a login.</div>
+        </div>
         <div class="stack"><span>JavaScript</span><span>React</span><span>Vite</span><span>Node.js</span><span>Docker</span></div>
         <span class="go">Open the demo <span class="ar">&rarr;</span></span>
       </a>
@@ -303,7 +365,10 @@
         <span class="flag">Live demo</span>
         <span class="k">Enterprise &middot; Internal tools</span>
         <h4>KR3 Laptop Tracker</h4>
-        <p>The laptop and device tracking system behind the Asset Tracker: company workspaces, employee assignment, and full device lifecycle from purchase to retirement. Deployed from the private repo as a live demo.</p>
+        <div class="ps">
+          <div class="ps-line"><span class="ps-tag">Problem</span>Device assignment and lifecycle tracking for KR3 employees was manual and easy to lose track of.</div>
+          <div class="ps-line"><span class="ps-tag sol">Solution</span>The laptop and device tracking system behind the Asset Tracker: company workspaces, employee assignment, and full device lifecycle from purchase to retirement. Deployed from the private repo as a live demo.</div>
+        </div>
         <div class="stack"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Supabase</span></div>
         <span class="go">Open the demo <span class="ar">&rarr;</span></span>
       </a>
@@ -312,7 +377,10 @@
         <span class="flag priv">In development</span>
         <span class="k">Climate &middot; Microsoft x IISD</span>
         <h4>i-Pledge Carbon Impact Platform</h4>
-        <p>A carbon impact tracking platform I build and manage as the technical developer, co-developed with Microsoft's CELA team and IISD. Slated to be presented at the Global Sustainability Summit 2026 in New Delhi.</p>
+        <div class="ps">
+          <div class="ps-line"><span class="ps-tag">Problem</span>Organizations pledging carbon reduction have no shared platform to track and show that impact at scale.</div>
+          <div class="ps-line"><span class="ps-tag sol">Solution</span>A carbon impact tracking platform I build and manage as the technical developer, co-developed with Microsoft's CELA team and IISD. Slated to be presented at the Global Sustainability Summit 2026 in New Delhi.</div>
+        </div>
         <div class="stack"><span>JavaScript</span><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>
       </div>
 
@@ -465,24 +533,77 @@
       </div>
     </div>
 
-    <a class="press reveal" href="https://minoritiesinstem.org/press" target="_blank" rel="noopener" style="display:block">
+    <div class="grouphead reveal"><h3>Presentations &amp; correspondence</h3><span>Where the work has been shown and said out loud</span></div>
+    <div class="talklist reveal">
+
+      <div class="talk">
+        <div class="tw done">Presented</div>
+        <div>
+          <h4>Microsoft World Youth Skills Day</h4>
+          <p>Spoke on July 15, 2026, in a session that grew out of Avants AI being shared within Microsoft's internal employee groups.</p>
+        </div>
+      </div>
+
+      <div class="talk">
+        <div class="tw done">Presented</div>
+        <div>
+          <h4>SkillsUSA National Leadership and Skills Conference</h4>
+          <p>Presented Minorities in STEM to the national SkillsUSA conference audience.</p>
+        </div>
+      </div>
+
+      <div class="talk">
+        <div class="tw done">Held</div>
+        <div>
+          <h4>U.S. National Innovate Challenge</h4>
+          <p>Organized and ran this challenge through Minorities in STEM.</p>
+        </div>
+      </div>
+
+      <div class="talk">
+        <div class="tw">Invited</div>
+        <div>
+          <h4>CareerTech VISION, ACTE National Conference</h4>
+          <p>Invited to present at ACTE's national conference on career and technical education.</p>
+        </div>
+      </div>
+
+      <div class="talk">
+        <div class="tw">Upcoming</div>
+        <div>
+          <h4>Global Sustainability Summit 2026, New Delhi</h4>
+          <p>Set to present the i-Pledge Carbon Impact Platform at IISD-CMI's summit, convened with Microsoft's CELA team. Exact date is still being finalized.</p>
+        </div>
+      </div>
+
+      <div class="talk">
+        <div class="tw done">Sent</div>
+        <div>
+          <h4>Letter to the White House</h4>
+          <p>Sent a letter introducing Minorities in STEM and proposing two pieces of federal STEM legislation: the STEM Education Advancement Act of 2026 and the STEM Opportunity Transparency and Equity Act of 2026.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="press reveal">
       <div class="ph2">
         <h3>In the news</h3>
         <span class="label">Press &middot; MIS network</span>
       </div>
       <p class="sub2">Minorities in STEM has been profiled by Channel Kindness and Innovation Insider, and the network's work appears in coverage across national and international outlets.</p>
       <div class="outlets">
-        <span>Channel Kindness</span>
+        <a href="https://www.channelkindness.org/minorities-in-stem/" target="_blank" rel="noopener">Channel Kindness &rarr;</a>
         <span>Innovation Insider</span>
         <span>CBC News</span>
         <span>Radio-Canada</span>
-        <span>Street Voices</span>
+        <a href="https://streetvoices.ca" target="_blank" rel="noopener">Street Voices &rarr;</a>
         <span>Sudbury Star</span>
         <span>CanadianSME Magazine</span>
         <span>U.S. National Innovator Challenge</span>
       </div>
-      <span class="plink">See all coverage at minoritiesinstem.org/press <span class="ar">&rarr;</span></span>
-    </a>
+      <a class="plink" href="https://minoritiesinstem.org/press" target="_blank" rel="noopener">See all coverage at minoritiesinstem.org/press <span class="ar">&rarr;</span></a>
+    </div>
   </div>
 </section>
 
