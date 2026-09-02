@@ -82,6 +82,9 @@
   .card .go{margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px}
   a.card:hover .go .ar{transform:translateX(3px)}
   .card .go .ar{transition:transform .18s}
+  .pgrid{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .pgrid img{width:100%;height:120px;object-fit:cover;border-radius:8px;border:1px solid var(--line);display:block}
+  .card.wide .pgrid{grid-template-columns:repeat(3,1fr)}
   .stack{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
   .stack span{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:10.5px;font-weight:500;letter-spacing:.02em;color:#4a5163;background:#f3f2ee;border:1px solid var(--line);border-radius:5px;padding:3px 7px}
   .ps{margin:10px 0 2px;display:flex;flex-direction:column;gap:6px}
@@ -382,6 +385,26 @@
           <div class="ps-line"><span class="ps-tag sol">Solution</span>A carbon impact tracking platform I build and manage as the technical developer, co-developed with Microsoft's CELA team and IISD. Slated to be presented at the Global Sustainability Summit 2026 in New Delhi.</div>
         </div>
         <div class="stack"><span>JavaScript</span><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>
+      </div>
+
+    </div>
+
+    <div class="grouphead reveal"><h3>Hardware &amp; assistive devices</h3><span>Physical builds, designed and 3D printed</span></div>
+    <div class="grid">
+
+      <div class="card wide reveal">
+        <span class="k">Assistive Tech &middot; 3D Printing</span>
+        <h4>Shepherd Center Adaptive Device Prints</h4>
+        <div class="ps">
+          <div class="ps-line"><span class="ps-tag">Problem</span>Patients at Shepherd Center, a spinal cord and brain injury rehab hospital, often need adaptive daily-living tools that off-the-shelf products don't fit: a splint-friendly writing grip, a one-handed cup holder, a shower brush they can actually hold.</div>
+          <div class="ps-line"><span class="ps-tag sol">Solution</span>Designed and 3D printed a set of patient-specific adaptive devices for the 23-24 batch: an adjustable inspection mirror, a cup holder, large and small deodorant holders, a dressing tool, shower brush and shower head brackets, and a writing splint, each engraved with the Shepherd Center mark and built in PETG/TPU on an FDM printer for one-handed or limited-grip use.</div>
+        </div>
+        <div class="pgrid">
+          <img src="assets/shepherd/ic-mirror.jpg" alt="3D printed adjustable inspection mirror mount, engraved with the Shepherd Center logo" loading="lazy" />
+          <img src="assets/shepherd/cup-holder.jpg" alt="3D printed one-handed cup holder" loading="lazy" />
+          <img src="assets/shepherd/writing-splint.jpg" alt="3D printed writing splint handle" loading="lazy" />
+        </div>
+        <div class="stack"><span>CAD design</span><span>PETG</span><span>TPU</span><span>FDM 3D printing</span><span>Assembly hardware</span></div>
       </div>
 
     </div>
